@@ -82,7 +82,6 @@
     </div>
   </section>
 
-  <!-- НАВІГАЦІЯ ПО ВІДДІЛЕННЯХ -->
   <section class="section departments-nav-section">
     <div class="container">
       <div class="departments-nav-grid">
@@ -383,85 +382,98 @@
   </footer>
 
   <script>
-    const burgerBtn = document.getElementById('burgerBtn');
-    const closeMenu = document.getElementById('closeMenu');
-    const sideMenu = document.getElementById('sideMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerBtn = document.getElementById('burgerBtn');
+      const closeMenu = document.getElementById('closeMenu');
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
 
-    burgerBtn.addEventListener('click', () => {
-      sideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
-    });
+      if (burgerBtn && closeMenu && sideMenu && menuOverlay) {
+        burgerBtn.addEventListener('click', function () {
+          sideMenu.classList.add('active');
+          menuOverlay.classList.add('active');
+        });
 
-    closeMenu.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
+        closeMenu.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
 
-    menuOverlay.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
+        menuOverlay.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
+      }
 
-    const fontButtons = document.querySelectorAll('.font-btn');
-    const contrastToggle = document.getElementById('contrastToggle');
-    const grayscaleToggle = document.getElementById('grayscaleToggle');
-    const uiToggle = document.getElementById('uiToggle');
+      const fontButtons = document.querySelectorAll('.font-btn');
+      const contrastToggle = document.getElementById('contrastToggle');
+      const grayscaleToggle = document.getElementById('grayscaleToggle');
+      const uiToggle = document.getElementById('uiToggle');
 
-    function setFontSize(size) {
-      document.body.classList.remove('font-small', 'font-normal', 'font-large');
-      document.body.classList.add(`font-${size}`);
-      localStorage.setItem('site-font-size', size);
+      function setFontSize(size) {
+        document.body.classList.remove('font-small', 'font-normal', 'font-large');
+        document.body.classList.add('font-' + size);
+        localStorage.setItem('site-font-size', size);
 
-      fontButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.font === size) {
-          btn.classList.add('active');
+        fontButtons.forEach(function (btn) {
+          btn.classList.remove('active');
+          if (btn.dataset.font === size) {
+            btn.classList.add('active');
+          }
+        });
+      }
+
+      function toggleBodyClass(className, storageKey, button) {
+        document.body.classList.toggle(className);
+        const isActive = document.body.classList.contains(className);
+        localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+
+        if (button) {
+          button.classList.toggle('active', isActive);
         }
+      }
+
+      fontButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setFontSize(btn.dataset.font);
+        });
       });
-    }
 
-    function toggleBodyClass(className, storageKey, button) {
-      document.body.classList.toggle(className);
-      const isActive = document.body.classList.contains(className);
-      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
-      button.classList.toggle('active', isActive);
-    }
+      if (contrastToggle) {
+        contrastToggle.addEventListener('click', function () {
+          toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+        });
+      }
 
-    fontButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        setFontSize(btn.dataset.font);
-      });
-    });
+      if (grayscaleToggle) {
+        grayscaleToggle.addEventListener('click', function () {
+          toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+        });
+      }
 
-    contrastToggle.addEventListener('click', () => {
-      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
-    });
+      if (uiToggle) {
+        uiToggle.addEventListener('click', function () {
+          toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+        });
+      }
 
-    grayscaleToggle.addEventListener('click', () => {
-      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
-    });
+      const savedFont = localStorage.getItem('site-font-size') || 'normal';
+      setFontSize(savedFont);
 
-    uiToggle.addEventListener('click', () => {
-      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
-    });
+      if (localStorage.getItem('site-high-contrast') === 'true' && contrastToggle) {
+        document.body.classList.add('high-contrast');
+        contrastToggle.classList.add('active');
+      }
 
-    const savedFont = localStorage.getItem('site-font-size') || 'normal';
-    setFontSize(savedFont);
+      if (localStorage.getItem('site-grayscale-mode') === 'true' && grayscaleToggle) {
+        document.body.classList.add('grayscale-mode');
+        grayscaleToggle.classList.add('active');
+      }
 
-    if (localStorage.getItem('site-high-contrast') === 'true') {
-      document.body.classList.add('high-contrast');
-      contrastToggle.classList.add('active');
-    }
-
-    if (localStorage.getItem('site-grayscale-mode') === 'true') {
-      document.body.classList.add('grayscale-mode');
-      grayscaleToggle.classList.add('active');
-    }
-
-    if (localStorage.getItem('site-large-ui') === 'true') {
-      document.body.classList.add('large-ui');
-      uiToggle.classList.add('active');
+      if (localStorage.getItem('site-large-ui') === 'true' && uiToggle) {
+        document.body.classList.add('large-ui');
+        uiToggle.classList.add('active');
+      }
     });
   </script>
 
