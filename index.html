@@ -276,28 +276,130 @@
       </div>
     </div>
   </footer>
-
+  
+<script src="js/search-data.js"></script>
   <script>
-    const burgerBtn = document.getElementById('burgerBtn');
-    const closeMenu = document.getElementById('closeMenu');
-    const sideMenu = document.getElementById('sideMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+  const burgerBtn = document.getElementById('burgerBtn');
+  const closeMenu = document.getElementById('closeMenu');
+  const sideMenu = document.getElementById('sideMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
 
-    burgerBtn.addEventListener('click', () => {
-      sideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
+  burgerBtn.addEventListener('click', () => {
+    sideMenu.classList.add('active');
+    menuOverlay.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    sideMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+  });
+
+  menuOverlay.addEventListener('click', () => {
+    sideMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+  });
+
+  const searchInput = document.getElementById("siteSearchInput");
+  const searchBtn = document.getElementById("siteSearchBtn");
+  const searchResults = document.getElementById("searchResults");
+
+  function normalizeText(text) {
+    return text
+      .toLowerCase()
+      .replace(/[’'`"]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function highlightMatch(text, queryWords) {
+    let result = text;
+
+    queryWords.forEach(word => {
+      if (!word) return;
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const regex = new RegExp(`(${escaped})`, "gi");
+      result = result.replace(regex, "<mark>$1</mark>");
     });
 
-    closeMenu.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
+    return result;
+  }
 
-    menuOverlay.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
-  </script>
+  function searchPages(query) {
+    const normalizedQuery = normalizeText(query);
+    const words = normalizedQuery.split(" ").filter(word => word.length > 1);
+
+    if (!words.length) return [];
+
+    const results = searchIndex.map(page => {
+      const title = normalizeText(page.title);
+      const description = normalizeText(page.description);
+      const content = normalizeText(page.content);
+
+      let score = 0;
+
+      words.forEach(word => {
+        if (title.includes(word)) score += 10;
+        if (description.includes(word)) score += 6;
+        if (content.includes(word)) score += 3;
+
+        const contentMatches = (content.match(new RegExp(word, "g")) || []).length;
+        score += contentMatches;
+      });
+
+      return { ...page, score };
+    })
+    .filter(page => page.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+    return results;
+  }
+
+  function performSearch() {
+    const query = searchInput.value.trim();
+
+    if (query === "") {
+      searchResults.innerHTML = `<div class="search-empty">Введіть слово або декілька слів для пошуку.</div>`;
+      return;
+    }
+
+    const results = searchPages(query);
+    const queryWords = normalizeText(query).split(" ").filter(word => word.length > 1);
+
+    if (!results.length) {
+      searchResults.innerHTML = `
+        <div class="search-empty">
+          За запитом <strong>${query}</strong> нічого не знайдено.
+        </div>
+      `;
+      return;
+    }
+
+    searchResults.innerHTML = results.map(page => `
+      <div class="search-result-item">
+        <h3>${highlightMatch(page.title, queryWords)}</h3>
+        <p>${highlightMatch(page.description, queryWords)}</p>
+        <a href="${page.url}">Перейти до розділу →</a>
+      </div>
+    `).join("");
+  }
+
+  searchBtn.addEventListener("click", performSearch);
+
+  searchInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      performSearch();
+    }
+  });
+
+  searchInput.addEventListener("input", function() {
+    if (this.value.trim() === "") {
+      searchResults.innerHTML = "";
+      return;
+    }
+
+    performSearch();
+  });
+</script>
 
 </body>
 </html>
