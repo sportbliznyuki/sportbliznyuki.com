@@ -3174,103 +3174,286 @@ transition:.3s;
 transform:scale(1.03);
 }
 
-/* adaptive */
+/* ===== GALLERY PAGE ===== */
 
-@media(max-width:900px){
-
-.gallery-years{
-grid-template-columns:1fr;
+.gallery-hero-page {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0 30px;
 }
 
-.gallery-grid{
-grid-template-columns:repeat(2,1fr);
+.gallery-page-section {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
+.gallery-years {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-@media(max-width:600px){
-
-.gallery-grid{
-grid-template-columns:1fr;
+.gallery-year-card {
+  position: relative;
+  z-index: 1;
+  min-height: 190px;
+  padding: 30px 20px;
+  border-radius: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
+.gallery-year-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.16);
 }
 
-.gallery-years{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
+.gallery-year-card strong {
+  font-size: 42px;
+  line-height: 1;
+  color: #ffffff;
 }
 
-.gallery-year-card{
-padding:60px 20px;
-border-radius:20px;
-background:var(--card-bg);
-border:1px solid var(--card-border);
-text-align:center;
-cursor:pointer;
-transition:.3s;
+.gallery-year-card span {
+  color: var(--text-soft);
+  font-size: 16px;
 }
 
-.gallery-year-card:hover{
-transform:translateY(-6px);
+.gallery-year-block {
+  display: none;
+  position: relative;
+  z-index: 1;
 }
 
-.gallery-year-card h2{
-font-size:40px;
-margin-bottom:10px;
+.gallery-year-block.active {
+  display: block;
 }
 
-.gallery-year{
-display:none;
+.gallery-back-btn {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--card-bg);
+  color: #ffffff;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.gallery-back{
-margin-bottom:20px;
-padding:10px 18px;
-border-radius:10px;
-background:var(--card-bg);
-border:1px solid var(--card-border);
-cursor:pointer;
+.gallery-back-btn:hover {
+  background: rgba(255,255,255,0.08);
 }
 
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
+.gallery-year-head {
+  margin-bottom: 20px;
 }
 
-.gallery-grid img{
-width:100%;
-height:240px;
-object-fit:cover;
-border-radius:14px;
-cursor:pointer;
-transition:.3s;
+.gallery-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.gallery-grid img:hover{
-transform:scale(1.03);
+.gallery-photo-card {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-/* adaptive */
-
-@media(max-width:900px){
-
-.gallery-years{
-grid-template-columns:1fr;
+.gallery-photo-card:hover {
+  transform: translateY(-4px);
 }
 
-.gallery-grid{
-grid-template-columns:repeat(2,1fr);
+.gallery-photo-card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* ===== LIGHTBOX ===== */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 12000;
 }
 
-@media(max-width:600px){
-
-.gallery-grid{
-grid-template-columns:1fr;
+.gallery-lightbox.active {
+  display: flex;
 }
 
+.gallery-lightbox img {
+  max-width: min(100%, 1100px);
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 12001;
+}
+
+/* ===== FIX HEADER CLICK ===== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.header-inner,
+.header-actions,
+.accessibility-controls {
+  position: relative;
+  z-index: 10001;
+}
+
+.burger,
+.close-menu,
+.access-btn,
+.menu-list a {
+  position: relative;
+  z-index: 10002;
+  pointer-events: auto;
+}
+
+.side-menu {
+  z-index: 11000;
+}
+
+.menu-overlay {
+  z-index: 10500;
+}
+
+/* ===== ACCESSIBILITY FOR GALLERY ===== */
+
+body.high-contrast .gallery-year-card,
+body.high-contrast .gallery-back-btn,
+body.high-contrast .gallery-photo-card img {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .gallery-year-card strong,
+body.high-contrast .gallery-year-card span {
+  color: #ffffff !important;
+}
+
+body.high-contrast .gallery-lightbox {
+  background: rgba(0, 0, 0, 0.96) !important;
+}
+
+body.high-contrast .gallery-lightbox-close {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.large-ui .gallery-year-card {
+  min-height: 210px;
+}
+
+body.large-ui .gallery-year-card strong {
+  font-size: 48px;
+}
+
+body.large-ui .gallery-photo-card img {
+  height: 270px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .gallery-years {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero-page {
+    padding: 70px 0 20px;
+  }
+
+  .gallery-years {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-year-card {
+    min-height: 150px;
+    padding: 24px 16px;
+  }
+
+  .gallery-year-card strong {
+    font-size: 34px;
+  }
+
+  .gallery-photo-card img {
+    height: 220px;
+  }
+
+  .gallery-lightbox {
+    padding: 16px;
+  }
+
+  .gallery-lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
 }
