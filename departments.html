@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Відділення | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <section class="page-hero departments-hero">
+    <div class="container">
+      <span class="section-label">Навчально-тренувальний процес</span>
+      <h1 class="page-title">Відділення</h1>
+      <p class="page-text">
+        У ДЮСШ Близнюки функціонують різні спортивні напрямки, у яких вихованці
+        можуть розвивати фізичні, технічні, командні та особистісні якості.
+      </p>
+    </div>
+  </section>
+
+  <!-- НАВІГАЦІЯ ПО ВІДДІЛЕННЯХ -->
+  <section class="section departments-nav-section">
+    <div class="container">
+      <div class="departments-nav-grid">
+        <a href="#football" class="department-nav-card">Футбол</a>
+        <a href="#volleyball" class="department-nav-card">Волейбол</a>
+        <a href="#esports" class="department-nav-card">Кіберспорт</a>
+        <a href="#powerlifting" class="department-nav-card">Пауерліфтинг</a>
+        <a href="#kettlebell" class="department-nav-card">Гирьовий спорт</a>
+        <a href="#fishing" class="department-nav-card">Спортивна риболовля</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТБОЛ -->
+  <section class="section department-section football-section" id="football">
+    <div class="container">
+      <div class="department-layout">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Футбол</h2>
+          <p class="department-text">
+            Футбольне відділення ДЮСШ Близнюки спрямоване на розвиток фізичної підготовки,
+            техніки гри, тактичного мислення та командної взаємодії. Вихованці беруть
+            участь у матчах, турнірах та офіційних змаганнях, представляючи школу і громаду.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Районні змагання, обласні турніри, товариські матчі, чемпіонати.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Призові місця у змаганнях, активна участь у чемпіонатах та стабільний розвиток команди.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>До секції можна додати загальні фото команди, тренувань і турнірів.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/football-1.jpg" alt="Футбольна команда">
+          <img src="images/football-2.jpg" alt="Футбольні тренування">
+          <img src="images/football-3.jpg" alt="Футбольний турнір">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВОЛЕЙБОЛ -->
+  <section class="section department-section volleyball-section" id="volleyball">
+    <div class="container">
+      <div class="department-layout reverse">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Волейбол</h2>
+          <p class="department-text">
+            Волейбольне відділення працює над розвитком координації, швидкості реакції,
+            техніки гри та командної взаємодії. Вихованці відділення беруть участь у
+            спортивних заходах, турнірах та шкільних і позашкільних змаганнях.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Районні турніри, обласні змагання, спортивні заходи серед молоді.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Командні успіхи, розвиток ігрової майстерності та представлення школи на турнірах.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>Фотографії матчів, командні фото та моменти з тренувального процесу.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/volleyball-1.jpg" alt="Волейбольна команда">
+          <img src="images/volleyball-2.jpg" alt="Волейбольні тренування">
+          <img src="images/volleyball-3.jpg" alt="Волейбольний турнір">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КІБЕРСПОРТ -->
+  <section class="section department-section esports-section" id="esports">
+    <div class="container">
+      <div class="department-layout">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Кіберспорт</h2>
+          <p class="department-text">
+            Відділення кіберспорту спрямоване на розвиток стратегічного мислення,
+            швидкості реакції, командної взаємодії та цифрової дисципліни. Команди
+            беруть участь у лігах, онлайн-турнірах та змаганнях різного рівня.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Онлайн-ліги, кіберспортивні турніри, командні матчі та регіональні змагання.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Участь у лігах, розвиток командного складу та формування турнірного досвіду.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>Фотографії складу, тренувального процесу та участі у кіберспортивних подіях.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/esports-1.jpg" alt="Команда з кіберспорту">
+          <img src="images/esports-2.jpg" alt="Тренування з кіберспорту">
+          <img src="images/esports-3.jpg" alt="Кіберспортивний турнір">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПАУЕРЛІФТИНГ -->
+  <section class="section department-section powerlifting-section" id="powerlifting">
+    <div class="container">
+      <div class="department-layout reverse">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Пауерліфтинг</h2>
+          <p class="department-text">
+            Відділення пауерліфтингу спрямоване на розвиток сили, витривалості,
+            техніки виконання вправ і спортивної дисципліни. Вихованці працюють над
+            поступовим прогресом, дотриманням техніки безпеки та підготовкою до змагань.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Місцеві змагання, чемпіонати, силові спортивні заходи.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Особисті спортивні результати, стабільний прогрес та участь у турнірах.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>Фото тренувань, виступів, нагороджень та спортивної підготовки.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/powerlifting-1.jpg" alt="Пауерліфтинг тренування">
+          <img src="images/powerlifting-2.jpg" alt="Пауерліфтинг змагання">
+          <img src="images/powerlifting-3.jpg" alt="Пауерліфтинг команда">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ГИРЬОВИЙ СПОРТ -->
+  <section class="section department-section kettlebell-section" id="kettlebell">
+    <div class="container">
+      <div class="department-layout">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Гирьовий спорт</h2>
+          <p class="department-text">
+            Відділення гирьового спорту сприяє розвитку сили, координації, витривалості
+            та технічної підготовки. Вихованці займаються системно, опановують правильну
+            техніку та готуються до спортивних виступів.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Змагання з гирьового спорту, спортивні заходи, місцеві та обласні старти.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Спортивні результати, призові місця, системний розвиток сили та техніки.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>Фото занять, виступів, нагороджень та участі у спортивних подіях.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/kettlebell-1.jpg" alt="Гирьовий спорт тренування">
+          <img src="images/kettlebell-2.jpg" alt="Гирьовий спорт виступ">
+          <img src="images/kettlebell-3.jpg" alt="Гирьовий спорт команда">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- СПОРТИВНА РИБОЛОВЛЯ -->
+  <section class="section department-section fishing-section" id="fishing">
+    <div class="container">
+      <div class="department-layout reverse">
+        <div class="department-content">
+          <span class="department-badge">Відділення</span>
+          <h2>Спортивна риболовля</h2>
+          <p class="department-text">
+            Відділення спортивної риболовлі розвиває уважність, витримку, технічні навички
+            та відповідальність. Вихованці беруть участь у профільних заходах, вдосконалюють
+            практичну підготовку та навички спортивної риболовлі.
+          </p>
+
+          <div class="department-info-grid">
+            <div class="department-info-box">
+              <h3>Тренери</h3>
+              <p>ПІБ тренера 1, ПІБ тренера 2</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Участь у турнірах</h3>
+              <p>Профільні змагання, спортивні заходи, виїзні старти та тематичні події.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Досягнення</h3>
+              <p>Успішна участь у заходах, розвиток технічних навичок та практичного досвіду.</p>
+            </div>
+
+            <div class="department-info-box">
+              <h3>Фото команди</h3>
+              <p>Світлини з виїздів, тренувань, змагань та тематичних заходів.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="department-gallery">
+          <img src="images/fishing-1.jpg" alt="Спортивна риболовля">
+          <img src="images/fishing-2.jpg" alt="Змагання зі спортивної риболовлі">
+          <img src="images/fishing-3.jpg" alt="Команда спортивної риболовлі">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    burgerBtn.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    const fontButtons = document.querySelectorAll('.font-btn');
+    const contrastToggle = document.getElementById('contrastToggle');
+    const grayscaleToggle = document.getElementById('grayscaleToggle');
+    const uiToggle = document.getElementById('uiToggle');
+
+    function setFontSize(size) {
+      document.body.classList.remove('font-small', 'font-normal', 'font-large');
+      document.body.classList.add(`font-${size}`);
+      localStorage.setItem('site-font-size', size);
+
+      fontButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.font === size) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function toggleBodyClass(className, storageKey, button) {
+      document.body.classList.toggle(className);
+      const isActive = document.body.classList.contains(className);
+      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+      button.classList.toggle('active', isActive);
+    }
+
+    fontButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setFontSize(btn.dataset.font);
+      });
+    });
+
+    contrastToggle.addEventListener('click', () => {
+      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+    });
+
+    grayscaleToggle.addEventListener('click', () => {
+      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+    });
+
+    uiToggle.addEventListener('click', () => {
+      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+    });
+
+    const savedFont = localStorage.getItem('site-font-size') || 'normal';
+    setFontSize(savedFont);
+
+    if (localStorage.getItem('site-high-contrast') === 'true') {
+      document.body.classList.add('high-contrast');
+      contrastToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-grayscale-mode') === 'true') {
+      document.body.classList.add('grayscale-mode');
+      grayscaleToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-large-ui') === 'true') {
+      document.body.classList.add('large-ui');
+      uiToggle.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
