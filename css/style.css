@@ -2886,3 +2886,158 @@ body.large-ui .doc-icon {
     margin-top: 6px;
   }
 }
+
+/* ===== ADMISSION PAGE ===== */
+
+.admission-hero {
+  padding: 90px 0 30px;
+}
+
+.admission-section {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.admission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.admission-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.admission-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.admission-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.admission-card h2 {
+  font-size: 28px;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.admission-card p {
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+.admission-list {
+  padding-left: 20px;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.admission-note {
+  padding: 30px;
+  border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.admission-note h3 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.admission-note p {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+/* ===== ACCESSIBILITY FOR ADMISSION ===== */
+
+body.high-contrast .admission-card,
+body.high-contrast .admission-note {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .admission-badge {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff;
+}
+
+body.high-contrast .admission-card h2,
+body.high-contrast .admission-card p,
+body.high-contrast .admission-list,
+body.high-contrast .admission-note h3,
+body.high-contrast .admission-note p {
+  color: #ffffff !important;
+}
+
+body.large-ui .admission-card {
+  padding: 32px;
+}
+
+body.large-ui .admission-card h2 {
+  font-size: 32px;
+}
+
+body.large-ui .admission-card p,
+body.large-ui .admission-list,
+body.large-ui .admission-note p {
+  font-size: 18px;
+}
+
+body.large-ui .admission-note h3 {
+  font-size: 34px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .admission-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admission-hero {
+    padding: 70px 0 20px;
+  }
+
+  .admission-card,
+  .admission-note {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .admission-card h2 {
+    font-size: 24px;
+  }
+
+  .admission-note h3 {
+    font-size: 26px;
+  }
+}
