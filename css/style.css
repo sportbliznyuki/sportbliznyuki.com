@@ -838,3 +838,182 @@ body.large-ui .brand-subtitle {
     min-width: 52px;
   }
 }
+
+/* ===== PAGE HERO ===== */
+
+.page-hero {
+  padding: 90px 0 40px;
+}
+
+.page-title {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.page-text {
+  max-width: 760px;
+  color: var(--text-soft);
+  font-size: 18px;
+}
+
+/* ===== STAFF PAGE ===== */
+
+.staff-intro-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.staff-intro-item {
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+}
+
+.staff-intro-item h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.staff-intro-item p {
+  color: var(--text-soft);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.staff-card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.staff-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.staff-photo-wrap {
+  aspect-ratio: 4 / 4.2;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+
+.staff-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.staff-content {
+  padding: 22px;
+}
+
+.staff-role {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.staff-content h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.staff-content p {
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+
+.staff-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staff-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #dce8f7;
+  word-break: break-word;
+}
+
+/* ===== ACCESSIBILITY SUPPORT FOR STAFF ===== */
+
+body.high-contrast .staff-card,
+body.high-contrast .staff-intro-item {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .staff-content p,
+body.high-contrast .staff-intro-item p,
+body.high-contrast .staff-contacts a {
+  color: #ffffff !important;
+}
+
+body.high-contrast .staff-role {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff;
+}
+
+body.large-ui .staff-content {
+  padding: 28px;
+}
+
+body.large-ui .staff-content h3 {
+  font-size: 28px;
+}
+
+body.large-ui .staff-contacts a {
+  font-size: 18px;
+}
+
+body.large-ui .staff-intro-item {
+  padding: 30px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .staff-intro-box,
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 70px 0 24px;
+  }
+
+  .page-text {
+    font-size: 16px;
+  }
+
+  .staff-intro-box,
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-content h3 {
+    font-size: 22px;
+  }
+}
