@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Розклад занять | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <section class="page-hero schedule-hero">
+    <div class="container">
+      <span class="section-label">Навчально-тренувальний процес</span>
+      <h1 class="page-title">Розклад занять</h1>
+      <p class="page-text">
+        Актуальний розклад тренувань по спортивних відділеннях ДЮСШ Близнюки.
+        Для зручності інформацію подано окремо по кожній секції.
+      </p>
+    </div>
+  </section>
+
+  <section class="section schedule-section">
+    <div class="container">
+
+      <div class="schedule-grid">
+
+        <!-- ФУТБОЛ -->
+        <article class="schedule-card">
+          <div class="schedule-card-head">
+            <span class="schedule-badge">Відділення</span>
+            <h2>Футбол</h2>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-row">
+              <span class="schedule-day">Вівторок</span>
+              <span class="schedule-time">12:00 – 21:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Четвер</span>
+              <span class="schedule-time">12:00 – 21:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Субота</span>
+              <span class="schedule-time">10:00 – 19:00</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ГИРЬОВИЙ СПОРТ -->
+        <article class="schedule-card">
+          <div class="schedule-card-head">
+            <span class="schedule-badge">Відділення</span>
+            <h2>Гирьовий спорт</h2>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-row">
+              <span class="schedule-day">Понеділок</span>
+              <span class="schedule-time">14:00 – 19:25</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Середа</span>
+              <span class="schedule-time">14:00 – 19:25</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">П’ятниця</span>
+              <span class="schedule-time">14:00 – 19:25</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Субота</span>
+              <span class="schedule-time">10:00 – 12:00</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ВОЛЕЙБОЛ -->
+        <article class="schedule-card">
+          <div class="schedule-card-head">
+            <span class="schedule-badge">Відділення</span>
+            <h2>Волейбол</h2>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-row">
+              <span class="schedule-day">Понеділок</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Середа</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">П’ятниця</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ПАУЕРЛІФТИНГ -->
+        <article class="schedule-card">
+          <div class="schedule-card-head">
+            <span class="schedule-badge">Відділення</span>
+            <h2>Пауерліфтинг</h2>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-row">
+              <span class="schedule-day">Понеділок</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Середа</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">П’ятниця</span>
+              <span class="schedule-time">13:30 – 20:00</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- КІБЕРСПОРТ -->
+        <article class="schedule-card schedule-card-wide">
+          <div class="schedule-card-head">
+            <span class="schedule-badge">Відділення</span>
+            <h2>Кіберспорт</h2>
+          </div>
+
+          <div class="schedule-list">
+            <div class="schedule-row">
+              <span class="schedule-day">Понеділок</span>
+              <span class="schedule-time">16:00 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Вівторок</span>
+              <span class="schedule-time">16:00 – 21:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Середа</span>
+              <span class="schedule-time">16:00 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Четвер</span>
+              <span class="schedule-time">16:00 – 21:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">П’ятниця</span>
+              <span class="schedule-time">16:00 – 20:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Субота</span>
+              <span class="schedule-time">16:00 – 21:00</span>
+            </div>
+            <div class="schedule-row">
+              <span class="schedule-day">Неділя</span>
+              <span class="schedule-time">16:00 – 21:00</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    burgerBtn.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    const fontButtons = document.querySelectorAll('.font-btn');
+    const contrastToggle = document.getElementById('contrastToggle');
+    const grayscaleToggle = document.getElementById('grayscaleToggle');
+    const uiToggle = document.getElementById('uiToggle');
+
+    function setFontSize(size) {
+      document.body.classList.remove('font-small', 'font-normal', 'font-large');
+      document.body.classList.add(`font-${size}`);
+      localStorage.setItem('site-font-size', size);
+
+      fontButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.font === size) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function toggleBodyClass(className, storageKey, button) {
+      document.body.classList.toggle(className);
+      const isActive = document.body.classList.contains(className);
+      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+      button.classList.toggle('active', isActive);
+    }
+
+    fontButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setFontSize(btn.dataset.font);
+      });
+    });
+
+    contrastToggle.addEventListener('click', () => {
+      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+    });
+
+    grayscaleToggle.addEventListener('click', () => {
+      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+    });
+
+    uiToggle.addEventListener('click', () => {
+      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+    });
+
+    const savedFont = localStorage.getItem('site-font-size') || 'normal';
+    setFontSize(savedFont);
+
+    if (localStorage.getItem('site-high-contrast') === 'true') {
+      document.body.classList.add('high-contrast');
+      contrastToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-grayscale-mode') === 'true') {
+      document.body.classList.add('grayscale-mode');
+      grayscaleToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-large-ui') === 'true') {
+      document.body.classList.add('large-ui');
+      uiToggle.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
