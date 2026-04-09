@@ -1,315 +1,174 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Галерея | ДЮСШ Близнюки</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фотогалерея | ДЮСШ Близнюки</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <header class="site-header">
-    <div class="header-inner">
+<header class="site-header">
+<div class="header-inner">
 
-      <a href="index.html" class="brand">
-        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
-        <div class="brand-text">
-          <span class="brand-title">ДЮСШ Близнюки</span>
-          <span class="brand-subtitle">Офіційний сайт</span>
-        </div>
-      </a>
+<a href="index.html" class="brand">
+<img src="images/logo-gromada.png" class="brand-logo">
+<div class="brand-text">
+<span class="brand-title">ДЮСШ Близнюки</span>
+<span class="brand-subtitle">Офіційний сайт</span>
+</div>
+</a>
 
-      <div class="header-actions">
-        <div class="accessibility-controls" aria-label="Налаштування доступності">
-          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
-          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
-          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+<div class="header-actions">
+<div class="accessibility-controls">
+<button class="access-btn font-btn" data-font="small">A-</button>
+<button class="access-btn font-btn" data-font="normal">A</button>
+<button class="access-btn font-btn" data-font="large">A+</button>
+<button class="access-btn" id="contrastToggle">Контраст</button>
+<button class="access-btn" id="grayscaleToggle">Ч/Б</button>
+<button class="access-btn" id="uiToggle">UI+</button>
+</div>
 
-          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
-            Контраст
-          </button>
+<button class="burger" id="burgerBtn">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
 
-          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
-            Ч/Б
-          </button>
+<nav class="side-menu" id="sideMenu">
+<div class="side-menu-top">
+<h2>Меню</h2>
+<button class="close-menu" id="closeMenu">✕</button>
+</div>
 
-          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
-            UI+
-          </button>
-        </div>
+<ul class="menu-list">
+<li><a href="index.html">Головна</a></li>
+<li><a href="staff.html">Склад</a></li>
+<li><a href="departments.html">Відділення</a></li>
+<li><a href="honor.html">Дошка пошани</a></li>
+<li><a href="news.html">Новини</a></li>
+<li><a href="contacts.html">Контакти</a></li>
+<li><a href="schedule.html">Розклад</a></li>
+<li><a href="gallery.html">Галерея</a></li>
+<li><a href="tournament.html">Турніри</a></li>
+<li><a href="docs.html">Нормативна база</a></li>
+<li><a href="admission.html">Правила прийому</a></li>
+<li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+</ul>
+</nav>
 
-        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
+<div class="menu-overlay" id="menuOverlay"></div>
+</header>
 
-    <nav class="side-menu" id="sideMenu">
-      <div class="side-menu-top">
-        <h2>Меню</h2>
-        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
-      </div>
+<section class="page-hero">
+<div class="container">
+<span class="section-label">Медіа</span>
+<h1 class="page-title">Фотогалерея</h1>
+<p class="page-text">
+Фотоматеріали змагань, тренувань та спортивних подій ДЮСШ Близнюки.
+</p>
+</div>
+</section>
 
-      <ul class="menu-list">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="staff.html">Склад</a></li>
-        <li><a href="departments.html">Відділення</a></li>
-        <li><a href="honor.html">Дошка пошани</a></li>
-        <li><a href="news.html">Новини</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-        <li><a href="schedule.html">Розклад</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="tournament.html">Турніри</a></li>
-        <li><a href="docs.html">Нормативна база</a></li>
-        <li><a href="admission.html">Правила прийому</a></li>
-        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
-      </ul>
-    </nav>
+<section class="section">
+<div class="container">
 
-    <div class="menu-overlay" id="menuOverlay"></div>
-  </header>
+<!-- YEARS -->
+<div class="gallery-years">
 
-  <!-- HERO -->
-  <section class="page-hero gallery-hero">
-    <div class="container">
-      <span class="section-label">Медіа</span>
-      <h1 class="page-title">Фотогалерея</h1>
-      <p class="page-text">
-        Світлини з життя ДЮСШ Близнюки, тренувань, турнірів, урочистостей та спортивних подій.
-      </p>
-    </div>
-  </section>
+<div class="gallery-year-card" onclick="openYear('year2025')">
+<h2>2025</h2>
+<span>Переглянути фото</span>
+</div>
 
-  <!-- ГАЛЕРЕЯ 2026 -->
-  <section class="section gallery-year-section">
-    <div class="container">
-      <div class="gallery-year-head">
-        <span class="section-label">Рік</span>
-        <h2 class="section-title">2026</h2>
-      </div>
+<div class="gallery-year-card" onclick="openYear('year2024')">
+<h2>2024</h2>
+<span>Переглянути фото</span>
+</div>
 
-      <div class="gallery-grid">
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-1.jpg" alt="Події ДЮСШ 2026">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-2.jpg" alt="Тренування ДЮСШ 2026">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-3.jpg" alt="Змагання ДЮСШ 2026">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-4.jpg" alt="Команда ДЮСШ 2026">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-5.jpg" alt="Спортивні події 2026">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2026-6.jpg" alt="Участь у турнірах 2026">
-        </button>
-      </div>
-    </div>
-  </section>
+<div class="gallery-year-card" onclick="openYear('year2023')">
+<h2>2023</h2>
+<span>Переглянути фото</span>
+</div>
 
-  <!-- ГАЛЕРЕЯ 2025 -->
-  <section class="section gallery-year-section">
-    <div class="container">
-      <div class="gallery-year-head">
-        <span class="section-label">Рік</span>
-        <h2 class="section-title">2025</h2>
-      </div>
+</div>
 
-      <div class="gallery-grid">
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-1.jpg" alt="Події ДЮСШ 2025">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-2.jpg" alt="Тренування ДЮСШ 2025">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-3.jpg" alt="Змагання ДЮСШ 2025">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-4.jpg" alt="Команда ДЮСШ 2025">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-5.jpg" alt="Спортивні події 2025">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2025-6.jpg" alt="Участь у турнірах 2025">
-        </button>
-      </div>
-    </div>
-  </section>
+<!-- YEAR 2025 -->
+<div class="gallery-year" id="year2025">
 
-  <!-- ГАЛЕРЕЯ 2024 -->
-  <section class="section gallery-year-section">
-    <div class="container">
-      <div class="gallery-year-head">
-        <span class="section-label">Рік</span>
-        <h2 class="section-title">2024</h2>
-      </div>
+<button class="gallery-back" onclick="closeYears()">← Назад до років</button>
 
-      <div class="gallery-grid">
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-1.jpg" alt="Події ДЮСШ 2024">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-2.jpg" alt="Тренування ДЮСШ 2024">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-3.jpg" alt="Змагання ДЮСШ 2024">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-4.jpg" alt="Команда ДЮСШ 2024">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-5.jpg" alt="Спортивні події 2024">
-        </button>
-        <button class="gallery-card" type="button">
-          <img src="images/gallery-2024-6.jpg" alt="Участь у турнірах 2024">
-        </button>
-      </div>
-    </div>
-  </section>
+<div class="gallery-grid">
 
-  <!-- МОДАЛЬНЕ ВІКНО -->
-  <div class="gallery-lightbox" id="galleryLightbox">
-    <button class="gallery-lightbox-close" id="lightboxClose" type="button" aria-label="Закрити">✕</button>
-    <img src="" alt="Збільшене фото" id="lightboxImage">
-  </div>
+<img src="images/gallery/2025/1.jpg">
+<img src="images/gallery/2025/2.jpg">
+<img src="images/gallery/2025/3.jpg">
+<img src="images/gallery/2025/4.jpg">
+<img src="images/gallery/2025/5.jpg">
+<img src="images/gallery/2025/6.jpg">
 
-  <!-- ФУТЕР -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>ДЮСШ Близнюки</h3>
-        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
-      </div>
+</div>
+</div>
 
-      <div class="footer-links">
-        <a href="index.html">Головна</a>
-        <a href="departments.html">Відділення</a>
-        <a href="news.html">Новини</a>
-        <a href="contacts.html">Контакти</a>
-      </div>
-    </div>
-  </footer>
+<!-- YEAR 2024 -->
+<div class="gallery-year" id="year2024">
 
-  <script>
-    const burgerBtn = document.getElementById('burgerBtn');
-    const closeMenu = document.getElementById('closeMenu');
-    const sideMenu = document.getElementById('sideMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+<button class="gallery-back" onclick="closeYears()">← Назад до років</button>
 
-    burgerBtn.addEventListener('click', () => {
-      sideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
-    });
+<div class="gallery-grid">
 
-    closeMenu.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
+<img src="images/gallery/2024/1.jpg">
+<img src="images/gallery/2024/2.jpg">
+<img src="images/gallery/2024/3.jpg">
+<img src="images/gallery/2024/4.jpg">
 
-    menuOverlay.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-    });
+</div>
+</div>
 
-    const fontButtons = document.querySelectorAll('.font-btn');
-    const contrastToggle = document.getElementById('contrastToggle');
-    const grayscaleToggle = document.getElementById('grayscaleToggle');
-    const uiToggle = document.getElementById('uiToggle');
+<!-- YEAR 2023 -->
+<div class="gallery-year" id="year2023">
 
-    function setFontSize(size) {
-      document.body.classList.remove('font-small', 'font-normal', 'font-large');
-      document.body.classList.add(`font-${size}`);
-      localStorage.setItem('site-font-size', size);
+<button class="gallery-back" onclick="closeYears()">← Назад до років</button>
 
-      fontButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.font === size) {
-          btn.classList.add('active');
-        }
-      });
-    }
+<div class="gallery-grid">
 
-    function toggleBodyClass(className, storageKey, button) {
-      document.body.classList.toggle(className);
-      const isActive = document.body.classList.contains(className);
-      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
-      button.classList.toggle('active', isActive);
-    }
+<img src="images/gallery/2023/1.jpg">
+<img src="images/gallery/2023/2.jpg">
+<img src="images/gallery/2023/3.jpg">
 
-    fontButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        setFontSize(btn.dataset.font);
-      });
-    });
+</div>
+</div>
 
-    contrastToggle.addEventListener('click', () => {
-      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
-    });
+</div>
+</section>
 
-    grayscaleToggle.addEventListener('click', () => {
-      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
-    });
+<script>
+function openYear(id){
 
-    uiToggle.addEventListener('click', () => {
-      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
-    });
+document.querySelector('.gallery-years').style.display='none'
 
-    const savedFont = localStorage.getItem('site-font-size') || 'normal';
-    setFontSize(savedFont);
+document.querySelectorAll('.gallery-year').forEach(el=>{
+el.style.display='none'
+})
 
-    if (localStorage.getItem('site-high-contrast') === 'true') {
-      document.body.classList.add('high-contrast');
-      contrastToggle.classList.add('active');
-    }
+document.getElementById(id).style.display='block'
 
-    if (localStorage.getItem('site-grayscale-mode') === 'true') {
-      document.body.classList.add('grayscale-mode');
-      grayscaleToggle.classList.add('active');
-    }
+window.scrollTo(0,0)
 
-    if (localStorage.getItem('site-large-ui') === 'true') {
-      document.body.classList.add('large-ui');
-      uiToggle.classList.add('active');
-    }
+}
 
-    const galleryCards = document.querySelectorAll('.gallery-card img');
-    const galleryLightbox = document.getElementById('galleryLightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxClose = document.getElementById('lightboxClose');
+function closeYears(){
 
-    galleryCards.forEach(img => {
-      img.addEventListener('click', () => {
-        galleryLightbox.classList.add('active');
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
-      });
-    });
+document.querySelector('.gallery-years').style.display='grid'
 
-    lightboxClose.addEventListener('click', () => {
-      galleryLightbox.classList.remove('active');
-    });
+document.querySelectorAll('.gallery-year').forEach(el=>{
+el.style.display='none'
+})
 
-    galleryLightbox.addEventListener('click', (e) => {
-      if (e.target === galleryLightbox) {
-        galleryLightbox.classList.remove('active');
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        galleryLightbox.classList.remove('active');
-      }
-    });
-  </script>
+}
+</script>
 
 </body>
 </html>
