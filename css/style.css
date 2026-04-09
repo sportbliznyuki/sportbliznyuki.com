@@ -1593,3 +1593,293 @@ body.large-ui .news-modal-content p {
     height: 42px;
   }
 }
+
+/* ===== HONOR PAGE ===== */
+
+.honor-hero {
+  padding: 90px 0 30px;
+}
+
+.honor-section {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.honor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.honor-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.honor-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.honor-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.honor-card-content {
+  padding: 22px;
+}
+
+.honor-sport {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.honor-card-content h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.honor-card-content p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ===== HONOR MODAL ===== */
+
+.honor-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.84);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 3000;
+}
+
+.honor-modal.active {
+  display: flex;
+}
+
+.honor-modal-box {
+  position: relative;
+  width: min(1050px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 24px;
+  background: #07111f;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+.honor-modal-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+}
+
+.honor-modal-image-wrap {
+  background: rgba(255,255,255,0.04);
+}
+
+.honor-modal-image {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.honor-modal-content {
+  padding: 32px;
+}
+
+.honor-modal-sport {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.honor-modal-content h2 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.honor-modal-block + .honor-modal-block {
+  margin-top: 24px;
+}
+
+.honor-modal-block h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.honor-modal-block p {
+  color: var(--text-soft);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.honor-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.35);
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* ===== ACCESSIBILITY FOR HONOR ===== */
+
+body.high-contrast .honor-card,
+body.high-contrast .honor-modal-box {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .honor-sport,
+body.high-contrast .honor-modal-sport {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff;
+}
+
+body.high-contrast .honor-card-content h3,
+body.high-contrast .honor-card-content p,
+body.high-contrast .honor-modal-content h2,
+body.high-contrast .honor-modal-block h3,
+body.high-contrast .honor-modal-block p {
+  color: #ffffff !important;
+}
+
+body.high-contrast .honor-modal-close {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.large-ui .honor-card img {
+  height: 340px;
+}
+
+body.large-ui .honor-card-content {
+  padding: 26px;
+}
+
+body.large-ui .honor-card-content h3 {
+  font-size: 28px;
+}
+
+body.large-ui .honor-card-content p {
+  font-size: 18px;
+}
+
+body.large-ui .honor-modal-content h2 {
+  font-size: 44px;
+}
+
+body.large-ui .honor-modal-block h3 {
+  font-size: 25px;
+}
+
+body.large-ui .honor-modal-block p {
+  font-size: 19px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .honor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .honor-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .honor-modal-image {
+    min-height: 360px;
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .honor-hero {
+    padding: 70px 0 20px;
+  }
+
+  .honor-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .honor-card img {
+    height: 250px;
+  }
+
+  .honor-card-content {
+    padding: 18px;
+  }
+
+  .honor-card-content h3 {
+    font-size: 22px;
+  }
+
+  .honor-modal {
+    padding: 14px;
+  }
+
+  .honor-modal-content {
+    padding: 20px;
+  }
+
+  .honor-modal-content h2 {
+    font-size: 28px;
+  }
+
+  .honor-modal-block h3 {
+    font-size: 20px;
+  }
+
+  .honor-modal-block p {
+    font-size: 16px;
+  }
+
+  .honor-modal-image {
+    min-height: 280px;
+    max-height: 320px;
+  }
+
+  .honor-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+  }
+}
