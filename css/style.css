@@ -3195,3 +3195,82 @@ grid-template-columns:1fr;
 }
 
 }
+
+.gallery-years{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.gallery-year-card{
+padding:60px 20px;
+border-radius:20px;
+background:var(--card-bg);
+border:1px solid var(--card-border);
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery-year-card:hover{
+transform:translateY(-6px);
+}
+
+.gallery-year-card h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.gallery-year{
+display:none;
+}
+
+.gallery-back{
+margin-bottom:20px;
+padding:10px 18px;
+border-radius:10px;
+background:var(--card-bg);
+border:1px solid var(--card-border);
+cursor:pointer;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.gallery-grid img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:14px;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
+
+/* adaptive */
+
+@media(max-width:900px){
+
+.gallery-years{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+}
