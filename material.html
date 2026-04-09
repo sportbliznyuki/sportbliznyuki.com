@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Матеріально-технічне забезпечення | ДЮСШ Близнюки</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+
+<a href="index.html" class="brand">
+<img src="images/logo-gromada.png" alt="Логотип" class="brand-logo">
+<div class="brand-text">
+<span class="brand-title">ДЮСШ Близнюки</span>
+<span class="brand-subtitle">Офіційний сайт</span>
+</div>
+</a>
+
+<div class="header-actions">
+<div class="accessibility-controls">
+
+<button class="access-btn font-btn" data-font="small">A-</button>
+<button class="access-btn font-btn" data-font="normal">A</button>
+<button class="access-btn font-btn" data-font="large">A+</button>
+
+<button class="access-btn" id="contrastToggle">Контраст</button>
+<button class="access-btn" id="grayscaleToggle">Ч/Б</button>
+<button class="access-btn" id="uiToggle">UI+</button>
+
+</div>
+
+<button class="burger" id="burgerBtn">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+
+<nav class="side-menu" id="sideMenu">
+<div class="side-menu-top">
+<h2>Меню</h2>
+<button class="close-menu" id="closeMenu">✕</button>
+</div>
+
+<ul class="menu-list">
+<li><a href="index.html">Головна</a></li>
+<li><a href="staff.html">Склад</a></li>
+<li><a href="departments.html">Відділення</a></li>
+<li><a href="honor.html">Дошка пошани</a></li>
+<li><a href="news.html">Новини</a></li>
+<li><a href="contacts.html">Контакти</a></li>
+<li><a href="schedule.html">Розклад</a></li>
+<li><a href="gallery.html">Галерея</a></li>
+<li><a href="tournament.html">Турніри</a></li>
+<li><a href="docs.html">Нормативна база</a></li>
+<li><a href="admission.html">Правила прийому</a></li>
+<li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+</ul>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+</header>
+
+<section class="page-hero material-hero">
+<div class="container">
+<span class="section-label">Інфраструктура</span>
+<h1 class="page-title">Матеріально-технічна база</h1>
+
+<p class="page-text">
+Дитячо-юнацька спортивна школа забезпечена необхідною матеріально-технічною базою
+для проведення тренувального процесу, участі у змаганнях та всебічного розвитку спортсменів.
+</p>
+</div>
+</section>
+
+<section class="section material-section">
+<div class="container">
+
+<div class="material-grid">
+
+<div class="material-card">
+<div class="material-icon">🏟</div>
+<h3>Спортивна інфраструктура</h3>
+<ul>
+<li>Ігрові спортивні зали</li>
+<li>Відкриті спортивні майданчики</li>
+<li>Футбольне поле</li>
+<li>Роздягальні та душові</li>
+<li>Тренерські кабінети</li>
+</ul>
+</div>
+
+<div class="material-card">
+<div class="material-icon">🏐</div>
+<h3>Спортивний інвентар</h3>
+<ul>
+<li>Футбольні м’ячі</li>
+<li>Волейбольні м’ячі</li>
+<li>Сітки, ворота, стійки</li>
+<li>Фішки та конуси</li>
+<li>Координаційні драбини</li>
+</ul>
+</div>
+
+<div class="material-card">
+<div class="material-icon">👕</div>
+<h3>Екіпірування</h3>
+<ul>
+<li>Ігрова форма</li>
+<li>Тренувальна форма</li>
+<li>Маніжки</li>
+<li>Захисне спорядження</li>
+<li>Спортивний інвентар</li>
+</ul>
+</div>
+
+<div class="material-card">
+<div class="material-icon">💻</div>
+<h3>Сучасне обладнання</h3>
+<ul>
+<li>Комп’ютерна техніка</li>
+<li>Відеоаналіз тренувань</li>
+<li>Телевізори</li>
+<li>Мультимедійне обладнання</li>
+<li>Презентаційне обладнання</li>
+</ul>
+</div>
+
+<div class="material-card">
+<div class="material-icon">🏥</div>
+<h3>Медичне забезпечення</h3>
+<ul>
+<li>Аптечки першої допомоги</li>
+<li>Контроль здоров’я спортсменів</li>
+<li>Безпечні умови тренувань</li>
+<li>Медичні рекомендації</li>
+</ul>
+</div>
+
+<div class="material-card">
+<div class="material-icon">🚌</div>
+<h3>Логістика</h3>
+<ul>
+<li>Виїзди на змагання</li>
+<li>Навчально-тренувальні збори</li>
+<li>Організація перевезень</li>
+<li>Супровід команд</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<script>
+const burgerBtn = document.getElementById('burgerBtn');
+const closeMenu = document.getElementById('closeMenu');
+const sideMenu = document.getElementById('sideMenu');
+const overlay = document.getElementById('menuOverlay');
+
+burgerBtn.onclick = () => {
+sideMenu.classList.add('active');
+overlay.classList.add('active');
+};
+
+closeMenu.onclick = () => {
+sideMenu.classList.remove('active');
+overlay.classList.remove('active');
+};
+
+overlay.onclick = () => {
+sideMenu.classList.remove('active');
+overlay.classList.remove('active');
+};
+</script>
+
+</body>
+</html>
