@@ -606,3 +606,235 @@ button {
   padding: 1px 4px;
   border-radius: 4px;
 }
+
+/* ===== ACCESSIBILITY CONTROLS ===== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accessibility-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.access-btn {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.access-btn:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+
+.access-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.mode-btn {
+  min-width: 72px;
+  font-size: 13px;
+}
+
+/* ===== FONT SIZE ===== */
+
+body.font-small {
+  font-size: 14px;
+}
+
+body.font-normal {
+  font-size: 16px;
+}
+
+body.font-large {
+  font-size: 18px;
+}
+
+body.font-small p,
+body.font-small a,
+body.font-small li,
+body.font-small span,
+body.font-small button {
+  font-size: 0.96em;
+}
+
+body.font-large p,
+body.font-large a,
+body.font-large li,
+body.font-large span,
+body.font-large button {
+  font-size: 1.06em;
+}
+
+body.font-large .hero-text,
+body.font-large .modern-card p,
+body.font-large .advantage-box p,
+body.font-large .content-box p,
+body.font-large .info-item p {
+  font-size: 1.08em;
+}
+
+/* ===== HIGH CONTRAST ===== */
+
+body.high-contrast {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .site-header,
+body.high-contrast .site-footer,
+body.high-contrast .side-menu,
+body.high-contrast .content-box,
+body.high-contrast .info-panel,
+body.high-contrast .modern-card,
+body.high-contrast .advantage-box,
+body.high-contrast .quick-link-box,
+body.high-contrast .stat-card,
+body.high-contrast .info-item {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .section-label,
+body.high-contrast .news-date,
+body.high-contrast .small-link,
+body.high-contrast .brand-subtitle,
+body.high-contrast .hero-text,
+body.high-contrast .modern-card p,
+body.high-contrast .advantage-box p,
+body.high-contrast .content-box p,
+body.high-contrast .info-item p,
+body.high-contrast .quick-link-box,
+body.high-contrast .footer-links a {
+  color: #ffffff !important;
+}
+
+body.high-contrast .btn-primary {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.high-contrast .btn-secondary,
+body.high-contrast .burger,
+body.high-contrast .close-menu,
+body.high-contrast .menu-list a,
+body.high-contrast .access-btn {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .burger span {
+  background: #ffffff !important;
+}
+
+/* ===== GRAYSCALE ===== */
+
+body.grayscale-mode {
+  filter: grayscale(100%);
+}
+
+/* ===== LARGE UI ===== */
+
+body.large-ui .btn,
+body.large-ui .burger,
+body.large-ui .close-menu,
+body.large-ui .access-btn {
+  min-height: 54px;
+  min-width: 54px;
+  font-size: 16px;
+}
+
+body.large-ui .menu-list a {
+  padding: 16px 18px;
+  font-size: 18px;
+}
+
+body.large-ui .quick-link-box,
+body.large-ui .modern-card,
+body.large-ui .advantage-box,
+body.large-ui .content-box,
+body.large-ui .info-panel {
+  padding: 30px;
+}
+
+body.large-ui .brand-title {
+  font-size: 20px;
+}
+
+body.large-ui .brand-subtitle {
+  font-size: 14px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 992px) {
+  .header-actions {
+    align-items: flex-start;
+  }
+
+  .accessibility-controls {
+    max-width: 320px;
+    gap: 6px;
+  }
+
+  .access-btn {
+    height: 38px;
+    min-width: 38px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .mode-btn {
+    min-width: 58px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .accessibility-controls {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 560px) {
+  .accessibility-controls {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .mode-btn {
+    min-width: 52px;
+  }
+}
