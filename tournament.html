@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Турніри | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <section class="page-hero tournament-hero">
+    <div class="container">
+      <span class="section-label">Навчально-тренувальний процес</span>
+      <h1 class="page-title">Турніри</h1>
+      <p class="page-text">
+        На цій сторінці розміщено інформацію про турніри, змагання та участь вихованців
+        ДЮСШ Близнюки у спортивних подіях різного рівня.
+      </p>
+    </div>
+  </section>
+
+  <!-- МАЙБУТНІ ТУРНІРИ -->
+  <section class="section tournament-section">
+    <div class="container">
+      <div class="tournament-head">
+        <span class="section-label">Найближчі події</span>
+        <h2 class="section-title">Заплановані турніри</h2>
+      </div>
+
+      <div class="tournament-grid">
+
+        <article class="tournament-card upcoming">
+          <img src="images/tournament-1.jpg" alt="Турнір з футболу">
+          <div class="tournament-card-content">
+            <span class="tournament-status upcoming-status">Заплановано</span>
+            <h3>Турнір з футболу серед юнаків</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>20.04.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>смт Близнюки</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Відділення:</strong>
+                <span>Футбол</span>
+              </div>
+            </div>
+
+            <p>
+              Команда ДЮСШ Близнюки готується до участі у турнірі, де матиме можливість
+              продемонструвати рівень підготовки, командну взаємодію та спортивний характер.
+            </p>
+          </div>
+        </article>
+
+        <article class="tournament-card upcoming">
+          <img src="images/tournament-2.jpg" alt="Волейбольний турнір">
+          <div class="tournament-card-content">
+            <span class="tournament-status upcoming-status">Заплановано</span>
+            <h3>Обласний турнір з волейболу</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>27.04.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>Харківська область</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Відділення:</strong>
+                <span>Волейбол</span>
+              </div>
+            </div>
+
+            <p>
+              Вихованці волейбольного відділення візьмуть участь у турнірі, де представлять
+              школу та матимуть можливість здобути новий змагальний досвід.
+            </p>
+          </div>
+        </article>
+
+        <article class="tournament-card upcoming">
+          <img src="images/tournament-3.jpg" alt="Кіберспортивний турнір">
+          <div class="tournament-card-content">
+            <span class="tournament-status upcoming-status">Заплановано</span>
+            <h3>Кіберспортивна ліга</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>30.04.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>Онлайн</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Відділення:</strong>
+                <span>Кіберспорт</span>
+              </div>
+            </div>
+
+            <p>
+              Команда з кіберспорту продовжує підготовку до лігових матчів і планує
+              участь у змаганнях із командної дисципліни.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОВЕДЕНІ ТУРНІРИ -->
+  <section class="section tournament-section">
+    <div class="container">
+      <div class="tournament-head">
+        <span class="section-label">Архів</span>
+        <h2 class="section-title">Проведені турніри та результати</h2>
+      </div>
+
+      <div class="tournament-grid">
+
+        <article class="tournament-card completed">
+          <img src="images/tournament-4.jpg" alt="Футбольний турнір">
+          <div class="tournament-card-content">
+            <span class="tournament-status completed-status">Завершено</span>
+            <h3>Районний футбольний турнір</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>05.04.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>Близнюківська громада</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Результат:</strong>
+                <span>II місце</span>
+              </div>
+            </div>
+
+            <p>
+              Команда ДЮСШ Близнюки гідно виступила на районному турнірі, продемонструвавши
+              хорошу організацію гри, витримку та командний дух.
+            </p>
+          </div>
+        </article>
+
+        <article class="tournament-card completed">
+          <img src="images/tournament-5.jpg" alt="Турнір з гирьового спорту">
+          <div class="tournament-card-content">
+            <span class="tournament-status completed-status">Завершено</span>
+            <h3>Змагання з гирьового спорту</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>28.03.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>Харківська область</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Результат:</strong>
+                <span>Призові місця</span>
+              </div>
+            </div>
+
+            <p>
+              Вихованці відділення гирьового спорту взяли участь у змаганнях та показали
+              високий рівень фізичної та технічної підготовки.
+            </p>
+          </div>
+        </article>
+
+        <article class="tournament-card completed">
+          <img src="images/tournament-6.jpg" alt="Турнір з пауерліфтингу">
+          <div class="tournament-card-content">
+            <span class="tournament-status completed-status">Завершено</span>
+            <h3>Відкритий турнір з пауерліфтингу</h3>
+
+            <div class="tournament-meta">
+              <div class="tournament-meta-item">
+                <strong>Дата:</strong>
+                <span>16.03.2026</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Місце:</strong>
+                <span>смт Близнюки</span>
+              </div>
+              <div class="tournament-meta-item">
+                <strong>Результат:</strong>
+                <span>Успішний виступ</span>
+              </div>
+            </div>
+
+            <p>
+              Спортсмени ДЮСШ Близнюки представили школу на змаганнях з пауерліфтингу
+              та показали хороші індивідуальні результати.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerBtn = document.getElementById('burgerBtn');
+      const closeMenu = document.getElementById('closeMenu');
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+
+      if (burgerBtn && closeMenu && sideMenu && menuOverlay) {
+        burgerBtn.addEventListener('click', function () {
+          sideMenu.classList.add('active');
+          menuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
+
+        menuOverlay.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
+      }
+
+      const fontButtons = document.querySelectorAll('.font-btn');
+      const contrastToggle = document.getElementById('contrastToggle');
+      const grayscaleToggle = document.getElementById('grayscaleToggle');
+      const uiToggle = document.getElementById('uiToggle');
+
+      function setFontSize(size) {
+        document.body.classList.remove('font-small', 'font-normal', 'font-large');
+        document.body.classList.add('font-' + size);
+        localStorage.setItem('site-font-size', size);
+
+        fontButtons.forEach(function (btn) {
+          btn.classList.remove('active');
+          if (btn.dataset.font === size) {
+            btn.classList.add('active');
+          }
+        });
+      }
+
+      function toggleBodyClass(className, storageKey, button) {
+        document.body.classList.toggle(className);
+        const isActive = document.body.classList.contains(className);
+        localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+
+        if (button) {
+          button.classList.toggle('active', isActive);
+        }
+      }
+
+      fontButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setFontSize(btn.dataset.font);
+        });
+      });
+
+      if (contrastToggle) {
+        contrastToggle.addEventListener('click', function () {
+          toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+        });
+      }
+
+      if (grayscaleToggle) {
+        grayscaleToggle.addEventListener('click', function () {
+          toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+        });
+      }
+
+      if (uiToggle) {
+        uiToggle.addEventListener('click', function () {
+          toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+        });
+      }
+
+      const savedFont = localStorage.getItem('site-font-size') || 'normal';
+      setFontSize(savedFont);
+
+      if (localStorage.getItem('site-high-contrast') === 'true' && contrastToggle) {
+        document.body.classList.add('high-contrast');
+        contrastToggle.classList.add('active');
+      }
+
+      if (localStorage.getItem('site-grayscale-mode') === 'true' && grayscaleToggle) {
+        document.body.classList.add('grayscale-mode');
+        grayscaleToggle.classList.add('active');
+      }
+
+      if (localStorage.getItem('site-large-ui') === 'true' && uiToggle) {
+        document.body.classList.add('large-ui');
+        uiToggle.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
