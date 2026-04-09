@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нормативна база | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <section class="page-hero docs-hero">
+    <div class="container">
+      <span class="section-label">Документи</span>
+      <h1 class="page-title">Нормативно-правова база</h1>
+      <p class="page-text">
+        На цій сторінці розміщено основні установчі, організаційні та нормативні документи
+        ДЮСШ Близнюки. Для перегляду натисніть на потрібний документ.
+      </p>
+    </div>
+  </section>
+
+  <section class="section docs-section">
+    <div class="container">
+      <div class="docs-list">
+
+        <a class="doc-card" href="docs-files/statut-kz-dyussh-redakciya-2025.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Статут КЗ "ДЮСШ" (редакція 2025 року)</h3>
+              <p>Установчий документ закладу</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/statut-kz-dyussh-onovleniy.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Статут КЗ "ДЮСШ" (оновлений)</h3>
+              <p>Оновлена редакція статуту</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/statut-kz-dyussh.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Статут КЗ "ДЮСШ"</h3>
+              <p>Основний статутний документ</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/vityag-z-derzhavnogo-reyestru.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Витяг з Державного реєстру</h3>
+              <p>Реєстраційний документ</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/vipiska-yedryuo.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Виписка ЄДРЮО</h3>
+              <p>Відомості з реєстру юридичних осіб</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/polozhennya-pro-zapobigannya-nasilstva.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Положення про запобігання насильства в закладах позашкільної освіти</h3>
+              <p>Безпека та захист учасників освітнього процесу</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/normi-vitrat-na-nagorodzhennya-zi-zminami.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Норми витрат на нагородження зі змінами</h3>
+              <p>Фінансові норми та зміни</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/pro-normi-vitrat-na-nagorodzhennya.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Про норми витрат на нагородження</h3>
+              <p>Регулювання витрат на нагородження</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/poryadok-norm-harchuvannya-ta-prozhivannya.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Порядок норм харчування та проживання учасників спортивних заходів</h3>
+              <p>Організація забезпечення учасників</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/robochiy-plan-dyussh-23-24.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Робочий план дитячо-юнацької спортивної школи 23/24 н.р.</h3>
+              <p>План роботи на навчальний рік</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/rozklad-zanyat-2023-2024.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Розклад занять ДЮСШ 2023–2024 навчальний рік</h3>
+              <p>Розклад освітньо-тренувального процесу</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/plan-zmagan-2024-rik-dyussh.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>План змагань 2024 рік ДЮСШ</h3>
+              <p>План спортивних заходів</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/yediniy-kalendarniy-plan-2025.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Єдиний календарний план 2025 рік</h3>
+              <p>Календар спортивних подій</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/robochiy-navchalniy-plan-2025.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Робочий навчальний план 2025 рік</h3>
+              <p>Навчально-тренувальний план</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+        <a class="doc-card" href="docs-files/pro-zatverdzhennya-polozhennya-pro-groshovu-dopomogu.pdf" target="_blank">
+          <div class="doc-card-left">
+            <div class="doc-icon">PDF</div>
+            <div class="doc-info">
+              <h3>Про затвердження положення про порядок надання грошової допомоги переможцям і призерам чемпіонатів України</h3>
+              <p>Положення щодо грошової допомоги</p>
+            </div>
+          </div>
+          <span class="doc-open">Відкрити</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerBtn = document.getElementById('burgerBtn');
+      const closeMenu = document.getElementById('closeMenu');
+      const sideMenu = document.getElementById('sideMenu');
+      const menuOverlay = document.getElementById('menuOverlay');
+
+      if (burgerBtn && closeMenu && sideMenu && menuOverlay) {
+        burgerBtn.addEventListener('click', function () {
+          sideMenu.classList.add('active');
+          menuOverlay.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
+
+        menuOverlay.addEventListener('click', function () {
+          sideMenu.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        });
+      }
+
+      const fontButtons = document.querySelectorAll('.font-btn');
+      const contrastToggle = document.getElementById('contrastToggle');
+      const grayscaleToggle = document.getElementById('grayscaleToggle');
+      const uiToggle = document.getElementById('uiToggle');
+
+      function setFontSize(size) {
+        document.body.classList.remove('font-small', 'font-normal', 'font-large');
+        document.body.classList.add('font-' + size);
+        localStorage.setItem('site-font-size', size);
+
+        fontButtons.forEach(function (btn) {
+          btn.classList.remove('active');
+          if (btn.dataset.font === size) {
+            btn.classList.add('active');
+          }
+        });
+      }
+
+      function toggleBodyClass(className, storageKey, button) {
+        document.body.classList.toggle(className);
+        const isActive = document.body.classList.contains(className);
+        localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+
+        if (button) {
+          button.classList.toggle('active', isActive);
+        }
+      }
+
+      fontButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setFontSize(btn.dataset.font);
+        });
+      });
+
+      if (contrastToggle) {
+        contrastToggle.addEventListener('click', function () {
+          toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+        });
+      }
+
+      if (grayscaleToggle) {
+        grayscaleToggle.addEventListener('click', function () {
+          toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+        });
+      }
+
+      if (uiToggle) {
+        uiToggle.addEventListener('click', function () {
+          toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+        });
+      }
+
+      const savedFont = localStorage.getItem('site-font-size') || 'normal';
+      setFontSize(savedFont);
+
+      if (localStorage.getItem('site-high-contrast') === 'true' && contrastToggle) {
+        document.body.classList.add('high-contrast');
+        contrastToggle.classList.add('active');
+      }
+
+      if (localStorage.getItem('site-grayscale-mode') === 'true' && grayscaleToggle) {
+        document.body.classList.add('grayscale-mode');
+        grayscaleToggle.classList.add('active');
+      }
+
+      if (localStorage.getItem('site-large-ui') === 'true' && uiToggle) {
+        document.body.classList.add('large-ui');
+        uiToggle.classList.add('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
