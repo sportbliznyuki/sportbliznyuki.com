@@ -1883,3 +1883,297 @@ body.large-ui .honor-modal-block p {
     height: 42px;
   }
 }
+
+/* ===== DEPARTMENTS PAGE ===== */
+
+.departments-hero {
+  padding: 90px 0 30px;
+}
+
+.departments-nav-section {
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
+.departments-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.department-nav-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 86px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  font-size: 20px;
+  font-weight: 700;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.department-nav-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.department-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.department-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-repeat: repeat;
+  background-size: 150px;
+}
+
+.football-section::before {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.16) 0 18px, transparent 19px);
+}
+
+.volleyball-section::before {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 0 16px, transparent 17px);
+}
+
+.esports-section::before {
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,0.10) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.10) 25%, transparent 25%);
+  background-size: 80px 80px;
+}
+
+.powerlifting-section::before {
+  background-image:
+    linear-gradient(90deg, transparent 42%, rgba(255,255,255,0.12) 42%, rgba(255,255,255,0.12) 58%, transparent 58%);
+  background-size: 180px 60px;
+}
+
+.kettlebell-section::before {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.10) 0 14px, transparent 15px);
+  background-size: 120px 120px;
+}
+
+.fishing-section::before {
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.10) 8%, transparent 8%),
+    linear-gradient(45deg, rgba(255,255,255,0.06) 8%, transparent 8%);
+  background-size: 100px 100px;
+}
+
+.department-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.department-layout.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.department-layout.reverse .department-content {
+  order: 2;
+}
+
+.department-layout.reverse .department-gallery {
+  order: 1;
+}
+
+.department-content,
+.department-gallery,
+.department-info-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+}
+
+.department-content {
+  padding: 30px;
+}
+
+.department-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.department-content h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  margin-bottom: 14px;
+}
+
+.department-text {
+  color: var(--text-soft);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.department-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.department-info-box {
+  padding: 22px;
+}
+
+.department-info-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.department-info-box p {
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.department-gallery {
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.department-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow);
+}
+
+/* ===== ACCESSIBILITY FOR DEPARTMENTS ===== */
+
+body.high-contrast .department-nav-card,
+body.high-contrast .department-content,
+body.high-contrast .department-gallery,
+body.high-contrast .department-info-box {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .department-badge {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff;
+}
+
+body.high-contrast .department-text,
+body.high-contrast .department-info-box p,
+body.high-contrast .department-info-box h3,
+body.high-contrast .department-content h2,
+body.high-contrast .department-nav-card {
+  color: #ffffff !important;
+}
+
+body.high-contrast .department-gallery img {
+  border-color: #ffffff !important;
+}
+
+body.large-ui .department-nav-card {
+  min-height: 96px;
+  font-size: 22px;
+}
+
+body.large-ui .department-content {
+  padding: 34px;
+}
+
+body.large-ui .department-content h2 {
+  font-size: 50px;
+}
+
+body.large-ui .department-text,
+body.large-ui .department-info-box p {
+  font-size: 19px;
+}
+
+body.large-ui .department-info-box h3 {
+  font-size: 22px;
+}
+
+body.large-ui .department-gallery img {
+  height: 250px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .departments-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .department-layout,
+  .department-layout.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .department-layout.reverse .department-content,
+  .department-layout.reverse .department-gallery {
+    order: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  .departments-hero {
+    padding: 70px 0 20px;
+  }
+
+  .departments-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .department-nav-card {
+    min-height: 72px;
+    font-size: 18px;
+  }
+
+  .department-content {
+    padding: 20px;
+  }
+
+  .department-text {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .department-info-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .department-info-box {
+    padding: 18px;
+  }
+
+  .department-gallery {
+    padding: 14px;
+  }
+
+  .department-gallery img {
+    height: 210px;
+  }
+}
