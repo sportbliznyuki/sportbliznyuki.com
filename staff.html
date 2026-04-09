@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Склад ДЮСШ | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero page-hero-staff">
+    <div class="container">
+      <span class="section-label">Про школу</span>
+      <h1 class="page-title">Склад ДЮСШ Близнюки</h1>
+      <p class="page-text">
+        На цій сторінці розміщено інформацію про адміністрацію та тренерський склад
+        Дитячо-юнацької спортивної школи Близнюки.
+      </p>
+    </div>
+  </section>
+
+  <!-- КОРОТКА ІНФОРМАЦІЯ -->
+  <section class="section">
+    <div class="container">
+      <div class="staff-intro-box">
+        <div class="staff-intro-item">
+          <h3>Адміністрація</h3>
+          <p>Організація роботи закладу, координація навчально-тренувального процесу, документація та розвиток школи.</p>
+        </div>
+        <div class="staff-intro-item">
+          <h3>Тренерський склад</h3>
+          <p>Підготовка вихованців, проведення тренувань, участь у змаганнях та виховання спортивної дисципліни.</p>
+        </div>
+        <div class="staff-intro-item">
+          <h3>Комунікація</h3>
+          <p>Для кожного працівника можна додати телефон, електронну пошту та короткий опис напряму роботи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАРТКИ ПРАЦІВНИКІВ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Працівники</span>
+      <h2 class="section-title">Адміністрація та тренери</h2>
+
+      <div class="staff-grid">
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-1.jpg" alt="Директор ДЮСШ" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Директор ДЮСШ</span>
+            <h3>ПІБ директора</h3>
+            <p>Керує діяльністю закладу, відповідає за організацію роботи, розвиток матеріальної бази та координацію освітньо-тренувального процесу.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000001">📞 +38 (000) 000-00-01</a>
+              <a href="mailto:director@dush.com.ua">✉ director@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-2.jpg" alt="Заступник директора ДЮСШ" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Заступник директора ДЮСШ</span>
+            <h3>ПІБ заступника</h3>
+            <p>Організовує внутрішню роботу закладу, контролює виконання планів, допомагає у веденні документації та супроводі напрямів діяльності.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000002">📞 +38 (000) 000-00-02</a>
+              <a href="mailto:deputy@dush.com.ua">✉ deputy@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-3.jpg" alt="Тренер з футболу" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 1</h3>
+            <p>Проводить тренування з футболу, готує вихованців до матчів та змагань, формує командну взаємодію і технічні навички.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000003">📞 +38 (000) 000-00-03</a>
+              <a href="mailto:trainer1@dush.com.ua">✉ trainer1@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-4.jpg" alt="Тренер з волейболу" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 2</h3>
+            <p>Проводить тренувальні заняття з волейболу, розвиває координацію, ігрове мислення та командну дисципліну у вихованців.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000004">📞 +38 (000) 000-00-04</a>
+              <a href="mailto:trainer2@dush.com.ua">✉ trainer2@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-5.jpg" alt="Тренер з кіберспорту" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 3</h3>
+            <p>Відповідає за напрям кіберспорту, тактичну підготовку, командну гру, дисципліну та участь вихованців у лігах і турнірах.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000005">📞 +38 (000) 000-00-05</a>
+              <a href="mailto:trainer3@dush.com.ua">✉ trainer3@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-6.jpg" alt="Тренер з пауерліфтингу" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 4</h3>
+            <p>Проводить силову підготовку, навчає техніці виконання вправ, контролює спортивний прогрес та безпечне тренування вихованців.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000006">📞 +38 (000) 000-00-06</a>
+              <a href="mailto:trainer4@dush.com.ua">✉ trainer4@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-7.jpg" alt="Тренер з гирьового спорту" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 5</h3>
+            <p>Розвиває силу, витривалість і техніку вихованців у гирьовому спорті, готує до виступів і спортивних заходів.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000007">📞 +38 (000) 000-00-07</a>
+              <a href="mailto:trainer5@dush.com.ua">✉ trainer5@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-8.jpg" alt="Тренер зі спортивної риболовлі" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 6</h3>
+            <p>Працює з вихованцями у напрямі спортивної риболовлі, формує практичні навички, витримку та технічну підготовку.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000008">📞 +38 (000) 000-00-08</a>
+              <a href="mailto:trainer6@dush.com.ua">✉ trainer6@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-9.jpg" alt="Тренер" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 7</h3>
+            <p>Здійснює навчально-тренувальну підготовку вихованців, сприяє розвитку фізичних якостей і спортивної дисципліни.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000009">📞 +38 (000) 000-00-09</a>
+              <a href="mailto:trainer7@dush.com.ua">✉ trainer7@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-10.jpg" alt="Тренер" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 8</h3>
+            <p>Організовує підготовку груп, відповідає за якісне проведення занять, участь у спортивних подіях та виховну роботу.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000010">📞 +38 (000) 000-00-10</a>
+              <a href="mailto:trainer8@dush.com.ua">✉ trainer8@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-11.jpg" alt="Тренер" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 9</h3>
+            <p>Проводить практичні та навчальні заняття, готує вихованців до змагань і працює над підвищенням спортивного рівня.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000011">📞 +38 (000) 000-00-11</a>
+              <a href="mailto:trainer9@dush.com.ua">✉ trainer9@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="staff-card">
+          <div class="staff-photo-wrap">
+            <img src="images/staff-12.jpg" alt="Тренер" class="staff-photo">
+          </div>
+          <div class="staff-content">
+            <span class="staff-role">Тренер</span>
+            <h3>ПІБ тренера 10</h3>
+            <p>Сприяє розвитку вихованців, відповідає за тренувальний процес, спортивну дисципліну та участь у запланованих заходах.</p>
+            <div class="staff-contacts">
+              <a href="tel:+380000000012">📞 +38 (000) 000-00-12</a>
+              <a href="mailto:trainer10@dush.com.ua">✉ trainer10@dush.com.ua</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    burgerBtn.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    const fontButtons = document.querySelectorAll('.font-btn');
+    const contrastToggle = document.getElementById('contrastToggle');
+    const grayscaleToggle = document.getElementById('grayscaleToggle');
+    const uiToggle = document.getElementById('uiToggle');
+
+    function setFontSize(size) {
+      document.body.classList.remove('font-small', 'font-normal', 'font-large');
+      document.body.classList.add(`font-${size}`);
+      localStorage.setItem('site-font-size', size);
+
+      fontButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.font === size) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function toggleBodyClass(className, storageKey, button) {
+      document.body.classList.toggle(className);
+      const isActive = document.body.classList.contains(className);
+      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+      button.classList.toggle('active', isActive);
+    }
+
+    fontButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setFontSize(btn.dataset.font);
+      });
+    });
+
+    contrastToggle.addEventListener('click', () => {
+      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+    });
+
+    grayscaleToggle.addEventListener('click', () => {
+      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+    });
+
+    uiToggle.addEventListener('click', () => {
+      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+    });
+
+    const savedFont = localStorage.getItem('site-font-size') || 'normal';
+    setFontSize(savedFont);
+
+    if (localStorage.getItem('site-high-contrast') === 'true') {
+      document.body.classList.add('high-contrast');
+      contrastToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-grayscale-mode') === 'true') {
+      document.body.classList.add('grayscale-mode');
+      grayscaleToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-large-ui') === 'true') {
+      document.body.classList.add('large-ui');
+      uiToggle.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
