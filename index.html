@@ -1,412 +1,157 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ДЮСШ Близнюки</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+.search-page-hero {
+  padding: 90px 0 30px;
+}
 
-  <!-- ШАПКА -->
-<header class="site-header">
-  <div class="header-inner">
-    
-    <a href="index.html" class="brand">
-      <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
-      <div class="brand-text">
-        <span class="brand-title">ДЮСШ Близнюки</span>
-        <span class="brand-subtitle">Офіційний сайт</span>
-      </div>
-    </a>
+.search-page-title {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
 
-    <div class="header-actions">
-      <a href="search.html" class="search-link" aria-label="Пошук по сайту">
-        🔍
-      </a>
+.search-page-text {
+  max-width: 760px;
+  color: var(--text-soft);
+  font-size: 18px;
+}
 
-      <button class="burger" id="burgerBtn" aria-label="Відкрити меню">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
+.search-page-section {
+  padding: 20px 0 80px;
+}
 
-  <nav class="side-menu" id="sideMenu">
-    <div class="side-menu-top">
-      <h2>Меню</h2>
-      <button class="close-menu" id="closeMenu" aria-label="Закрити меню">✕</button>
-    </div>
+.search-page-box {
+  padding: 30px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
 
-    <ul class="menu-list">
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="staff.html">Склад</a></li>
-      <li><a href="departments.html">Відділення</a></li>
-      <li><a href="honor.html">Дошка пошани</a></li>
-      <li><a href="news.html">Новини</a></li>
-      <li><a href="contacts.html">Контакти</a></li>
-      <li><a href="schedule.html">Розклад</a></li>
-      <li><a href="gallery.html">Галерея</a></li>
-      <li><a href="tournament.html">Турніри</a></li>
-      <li><a href="docs.html">Нормативна база</a></li>
-      <li><a href="admission.html">Правила прийому</a></li>
-      <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
-    </ul>
-  </nav>
+.search-form-large {
+  margin-bottom: 28px;
+}
 
-  <div class="menu-overlay" id="menuOverlay"></div>
-</header>
+.search-results-page {
+  display: grid;
+  gap: 18px;
+}
 
-  <!-- ГОЛОВНИЙ ЕКРАН -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">Офіційна сторінка закладу</div>
-      <h1>Дитячо-юнацька спортивна школа Близнюків</h1>
-      <p class="hero-text">
-        Простір розвитку, дисципліни, командного духу та спортивних досягнень.
-        Ми виховуємо сильних, вмотивованих і цілеспрямованих дітей та молодь.
-      </p>
+.search-results-head {
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
 
-      <div class="hero-buttons">
-        <a href="departments.html" class="btn btn-primary">Переглянути відділення</a>
-        <a href="contacts.html" class="btn btn-secondary">Зв’язатися з нами</a>
-      </div>
+.search-results-head h3 {
+  margin-bottom: 6px;
+}
 
-      <div class="hero-stats">
-        <div class="stat-card">
-          <strong>6+</strong>
-          <span>спортивних напрямків</span>
-        </div>
-        <div class="stat-card">
-          <strong>10+</strong>
-          <span>тренерів та фахівців</span>
-        </div>
-        <div class="stat-card">
-          <strong>100%</strong>
-          <span>орієнтація на розвиток дітей</span>
-        </div>
-      </div>
-    </div>
-  </section>
+.search-result-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: var(--transition);
+}
 
-  <!-- БІГУЧА СТРІЧКА З ФОТО -->
-  <section class="photo-marquee-section">
-    <div class="container">
-      <h2 class="section-title">Життя нашої школи</h2>
-    </div>
+.search-result-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.16);
+}
 
-    <div class="photo-marquee">
-      <div class="photo-track">
-        <img src="images/slide1.jpg" alt="Фото 1">
-        <img src="images/slide2.jpg" alt="Фото 2">
-        <img src="images/slide3.jpg" alt="Фото 3">
-        <img src="images/slide4.jpg" alt="Фото 4">
-        <img src="images/slide5.jpg" alt="Фото 5">
+.search-result-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
 
-        <!-- дубль для безкінечної анімації -->
-        <img src="images/slide1.jpg" alt="Фото 1">
-        <img src="images/slide2.jpg" alt="Фото 2">
-        <img src="images/slide3.jpg" alt="Фото 3">
-        <img src="images/slide4.jpg" alt="Фото 4">
-        <img src="images/slide5.jpg" alt="Фото 5">
-      </div>
-    </div>
-  </section>
+.search-result-label,
+.search-score {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
 
-  <!-- ПРО ШКОЛУ -->
-  <section class="about-school section">
-    <div class="container two-columns">
-      <div class="content-box">
-        <span class="section-label">Про заклад</span>
-        <h2>Сучасна спортивна школа для дітей та молоді</h2>
-        <p>
-          Дитячо-юнацька спортивна школа Близнюків — це заклад, у якому діти мають
-          можливість розвиватися фізично, морально та командно. Ми працюємо над тим,
-          щоб кожен вихованець отримував якісну підготовку, підтримку тренерів та
-          можливість представляти громаду на змаганнях різного рівня.
-        </p>
-        <p>
-          Основна мета школи — формування здорового способу життя, розвиток спортивних
-          здібностей, виховання характеру, дисципліни та любові до спорту.
-        </p>
-      </div>
+.search-result-label {
+  background: rgba(47, 128, 237, 0.16);
+  color: #cfe3ff;
+}
 
-      <div class="info-panel">
-        <div class="info-item">
-          <h3>Наша місія</h3>
-          <p>Створювати умови для гармонійного спортивного розвитку дітей і молоді.</p>
-        </div>
-        <div class="info-item">
-          <h3>Наш підхід</h3>
-          <p>Поєднання тренувального процесу, виховання командного духу та участі у змаганнях.</p>
-        </div>
-        <div class="info-item">
-          <h3>Наш результат</h3>
-          <p>Підготовка активних, сильних, дисциплінованих і цілеспрямованих вихованців.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.search-score {
+  background: rgba(25, 195, 125, 0.14);
+  color: #ccffe8;
+}
 
-  <!-- НАПРЯМКИ -->
-  <section class="directions section">
-    <div class="container">
-      <span class="section-label">Відділення</span>
-      <h2 class="section-title">Спортивні напрямки ДЮСШ</h2>
+.search-result-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-      <div class="cards-grid">
-        <a href="departments.html" class="modern-card">
-          <h3>Футбол</h3>
-          <p>Командна гра, турніри, змагальна практика та розвиток техніки.</p>
-        </a>
+.search-result-desc {
+  color: var(--text-soft);
+  margin-bottom: 14px;
+}
 
-        <a href="departments.html" class="modern-card">
-          <h3>Волейбол</h3>
-          <p>Розвиток координації, взаємодії у команді та ігрового мислення.</p>
-        </a>
+.search-snippet {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  color: #dce8f7;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
 
-        <a href="departments.html" class="modern-card">
-          <h3>Кіберспорт</h3>
-          <p>Тактичне мислення, командна взаємодія, цифрова дисципліна та участь у лігах.</p>
-        </a>
+.search-result-actions {
+  display: flex;
+  justify-content: flex-start;
+}
 
-        <a href="departments.html" class="modern-card">
-          <h3>Пауерліфтинг</h3>
-          <p>Силова підготовка, техніка виконання вправ та спортивний прогрес.</p>
-        </a>
+.large-empty {
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
 
-        <a href="departments.html" class="modern-card">
-          <h3>Гирьовий спорт</h3>
-          <p>Сила, витривалість, техніка та послідовний фізичний розвиток.</p>
-        </a>
+.large-empty h3 {
+  margin-bottom: 10px;
+}
 
-        <a href="departments.html" class="modern-card">
-          <h3>Спортивна риболовля</h3>
-          <p>Зосередженість, витримка, технічні навички та участь у профільних заходах.</p>
-        </a>
-      </div>
-    </div>
-  </section>
+.search-result-card mark,
+.search-snippet mark {
+  background: rgba(25, 195, 125, 0.22);
+  color: #ffffff;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
 
-  <!-- ПЕРЕВАГИ -->
-  <section class="advantages section">
-    <div class="container">
-      <span class="section-label">Переваги</span>
-      <h2 class="section-title">Чому обирають нашу школу</h2>
-
-      <div class="advantages-grid">
-        <div class="advantage-box">
-          <h3>Досвідчені тренери</h3>
-          <p>Фахівці, які допомагають кожній дитині розкрити свій потенціал.</p>
-        </div>
-        <div class="advantage-box">
-          <h3>Участь у змаганнях</h3>
-          <p>Регулярна практика, турніри та представлення громади на спортивних подіях.</p>
-        </div>
-        <div class="advantage-box">
-          <h3>Розвиток дисципліни</h3>
-          <p>Спорт формує відповідальність, витримку, характер і впевненість у собі.</p>
-        </div>
-        <div class="advantage-box">
-          <h3>Дружня атмосфера</h3>
-          <p>Підтримка, командний дух і позитивне середовище для дітей та молоді.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- НОВИНИ / ОГОЛОШЕННЯ -->
-  <section class="home-news section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <span class="section-label">Оновлення</span>
-          <h2 class="section-title">Новини та оголошення</h2>
-        </div>
-        <a href="news.html" class="small-link">Усі новини</a>
-      </div>
-
-      <div class="cards-grid">
-        <article class="modern-card news-card">
-          <span class="news-date">09.04.2026</span>
-          <h3>Відкрито набір до спортивних секцій</h3>
-          <p>Запрошуємо дітей та підлітків долучатися до тренувань у спортивних відділеннях ДЮСШ.</p>
-        </article>
-
-        <article class="modern-card news-card">
-          <span class="news-date">09.04.2026</span>
-          <h3>Підготовка до нового турнірного сезону</h3>
-          <p>Команди школи продовжують тренувальний процес та готуються до участі у змаганнях.</p>
-        </article>
-
-        <article class="modern-card news-card">
-          <span class="news-date">09.04.2026</span>
-          <h3>Оновлення розкладу занять</h3>
-          <p>На сайті буде доступний актуальний розклад занять по всіх спортивних напрямках.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ШВИДКИЙ ДОСТУП -->
-  <section class="quick-links section">
-    <div class="container">
-      <span class="section-label">Навігація</span>
-      <h2 class="section-title">Швидкий доступ</h2>
-
-      <div class="quick-links-grid">
-        <a href="schedule.html" class="quick-link-box">Розклад занять</a>
-        <a href="admission.html" class="quick-link-box">Правила прийому</a>
-        <a href="docs.html" class="quick-link-box">Нормативна база</a>
-        <a href="material.html" class="quick-link-box">Матеріально-технічне забезпечення</a>
-        <a href="gallery.html" class="quick-link-box">Фотогалерея</a>
-        <a href="contacts.html" class="quick-link-box">Контакти</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ФУТЕР -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>ДЮСШ Близнюки</h3>
-        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Головна</a>
-        <a href="departments.html">Відділення</a>
-        <a href="news.html">Новини</a>
-        <a href="contacts.html">Контакти</a>
-      </div>
-    </div>
-  </footer>
-  
-<script src="js/search-data.js"></script>
-  <script>
-  const burgerBtn = document.getElementById('burgerBtn');
-  const closeMenu = document.getElementById('closeMenu');
-  const sideMenu = document.getElementById('sideMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-
-  burgerBtn.addEventListener('click', () => {
-    sideMenu.classList.add('active');
-    menuOverlay.classList.add('active');
-  });
-
-  closeMenu.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
-  });
-
-  menuOverlay.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
-  });
-
-  const searchInput = document.getElementById("siteSearchInput");
-  const searchBtn = document.getElementById("siteSearchBtn");
-  const searchResults = document.getElementById("searchResults");
-
-  function normalizeText(text) {
-    return text
-      .toLowerCase()
-      .replace(/[’'`"]/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+@media (max-width: 768px) {
+  .search-page-hero {
+    padding: 70px 0 20px;
   }
 
-  function highlightMatch(text, queryWords) {
-    let result = text;
-
-    queryWords.forEach(word => {
-      if (!word) return;
-      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const regex = new RegExp(`(${escaped})`, "gi");
-      result = result.replace(regex, "<mark>$1</mark>");
-    });
-
-    return result;
+  .search-page-box {
+    padding: 20px;
   }
 
-  function searchPages(query) {
-    const normalizedQuery = normalizeText(query);
-    const words = normalizedQuery.split(" ").filter(word => word.length > 1);
-
-    if (!words.length) return [];
-
-    const results = searchIndex.map(page => {
-      const title = normalizeText(page.title);
-      const description = normalizeText(page.description);
-      const content = normalizeText(page.content);
-
-      let score = 0;
-
-      words.forEach(word => {
-        if (title.includes(word)) score += 10;
-        if (description.includes(word)) score += 6;
-        if (content.includes(word)) score += 3;
-
-        const contentMatches = (content.match(new RegExp(word, "g")) || []).length;
-        score += contentMatches;
-      });
-
-      return { ...page, score };
-    })
-    .filter(page => page.score > 0)
-    .sort((a, b) => b.score - a.score);
-
-    return results;
+  .search-result-card {
+    padding: 18px;
   }
 
-  function performSearch() {
-    const query = searchInput.value.trim();
-
-    if (query === "") {
-      searchResults.innerHTML = `<div class="search-empty">Введіть слово або декілька слів для пошуку.</div>`;
-      return;
-    }
-
-    const results = searchPages(query);
-    const queryWords = normalizeText(query).split(" ").filter(word => word.length > 1);
-
-    if (!results.length) {
-      searchResults.innerHTML = `
-        <div class="search-empty">
-          За запитом <strong>${query}</strong> нічого не знайдено.
-        </div>
-      `;
-      return;
-    }
-
-    searchResults.innerHTML = results.map(page => `
-      <div class="search-result-item">
-        <h3>${highlightMatch(page.title, queryWords)}</h3>
-        <p>${highlightMatch(page.description, queryWords)}</p>
-        <a href="${page.url}">Перейти до розділу →</a>
-      </div>
-    `).join("");
+  .search-result-card h3 {
+    font-size: 21px;
   }
 
-  searchBtn.addEventListener("click", performSearch);
-
-  searchInput.addEventListener("keydown", function(e) {
-    if (e.key === "Enter") {
-      performSearch();
-    }
-  });
-
-  searchInput.addEventListener("input", function() {
-    if (this.value.trim() === "") {
-      searchResults.innerHTML = "";
-      return;
-    }
-
-    performSearch();
-  });
-</script>
-
-</body>
-</html>
+  .search-result-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
