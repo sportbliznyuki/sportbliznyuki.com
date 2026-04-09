@@ -1209,3 +1209,147 @@ body.large-ui .contact-info-item p {
   }
 
 }
+
+/* ===== GALLERY PAGE ===== */
+
+.gallery-hero {
+  padding: 90px 0 30px;
+}
+
+.gallery-year-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.gallery-year-head {
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-card {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== LIGHTBOX ===== */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  z-index: 3000;
+}
+
+.gallery-lightbox.active {
+  display: flex;
+}
+
+.gallery-lightbox img {
+  max-width: min(100%, 1100px);
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ===== ACCESSIBILITY FOR GALLERY ===== */
+
+body.high-contrast .gallery-card img {
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .gallery-lightbox {
+  background: rgba(0, 0, 0, 0.96) !important;
+}
+
+body.high-contrast .gallery-lightbox-close {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.large-ui .gallery-card img {
+  height: 320px;
+}
+
+body.large-ui .gallery-lightbox-close {
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+}
+
+/* ===== ADAPTIVE ===== */
+
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 70px 0 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-card img {
+    height: 240px;
+  }
+
+  .gallery-lightbox {
+    padding: 18px;
+  }
+
+  .gallery-lightbox-close {
+    top: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+}
