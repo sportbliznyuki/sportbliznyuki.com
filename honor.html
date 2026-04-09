@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дошка пошани | ДЮСШ Близнюки</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo-gromada.png" alt="Логотип громади" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">ДЮСШ Близнюки</span>
+          <span class="brand-subtitle">Офіційний сайт</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="accessibility-controls" aria-label="Налаштування доступності">
+          <button class="access-btn font-btn" data-font="small" type="button" title="Зменшити шрифт">A-</button>
+          <button class="access-btn font-btn" data-font="normal" type="button" title="Стандартний шрифт">A</button>
+          <button class="access-btn font-btn" data-font="large" type="button" title="Збільшити шрифт">A+</button>
+
+          <button class="access-btn mode-btn" id="contrastToggle" type="button" title="Контрастний режим">
+            Контраст
+          </button>
+
+          <button class="access-btn mode-btn" id="grayscaleToggle" type="button" title="Чорно-білий режим">
+            Ч/Б
+          </button>
+
+          <button class="access-btn mode-btn" id="uiToggle" type="button" title="Збільшені елементи">
+            UI+
+          </button>
+        </div>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="side-menu-top">
+        <h2>Меню</h2>
+        <button class="close-menu" id="closeMenu" aria-label="Закрити меню" type="button">✕</button>
+      </div>
+
+      <ul class="menu-list">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="staff.html">Склад</a></li>
+        <li><a href="departments.html">Відділення</a></li>
+        <li><a href="honor.html">Дошка пошани</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="schedule.html">Розклад</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="tournament.html">Турніри</a></li>
+        <li><a href="docs.html">Нормативна база</a></li>
+        <li><a href="admission.html">Правила прийому</a></li>
+        <li><a href="material.html">Матеріально-технічне забезпечення</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+  </header>
+
+  <section class="page-hero honor-hero">
+    <div class="container">
+      <span class="section-label">Досягнення</span>
+      <h1 class="page-title">Дошка пошани</h1>
+      <p class="page-text">
+        На цій сторінці представлено вихованців та спортсменів, які своїми результатами,
+        наполегливістю та працею прославляють ДЮСШ Близнюки.
+      </p>
+    </div>
+  </section>
+
+  <section class="section honor-section">
+    <div class="container">
+      <div class="honor-grid">
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 1"
+          data-role="Футбол"
+          data-image="images/honor-1.jpg"
+          data-bio="Вихованець ДЮСШ Близнюки, який активно бере участь у змаганнях та демонструє високий рівень підготовки."
+          data-achievements="Переможець районних змагань, учасник обласних турнірів, неодноразово відзначений за командну гру та спортивну дисципліну.">
+          <img src="images/honor-1.jpg" alt="ПІБ спортсмена 1">
+          <div class="honor-card-content">
+            <span class="honor-sport">Футбол</span>
+            <h3>ПІБ спортсмена 1</h3>
+            <p>Активний вихованець школи, який демонструє стабільний розвиток та спортивну дисципліну.</p>
+          </div>
+        </article>
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 2"
+          data-role="Волейбол"
+          data-image="images/honor-2.jpg"
+          data-bio="Спортсменка ДЮСШ Близнюки, яка бере активну участь у волейбольних турнірах та показує високий рівень гри."
+          data-achievements="Призерка районних змагань, учасниця обласних турнірів, відзначена за технічну майстерність та командну взаємодію.">
+          <img src="images/honor-2.jpg" alt="ПІБ спортсмена 2">
+          <div class="honor-card-content">
+            <span class="honor-sport">Волейбол</span>
+            <h3>ПІБ спортсмена 2</h3>
+            <p>Сильна командна гравчиня, яка стабільно представляє школу на спортивних заходах.</p>
+          </div>
+        </article>
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 3"
+          data-role="Кіберспорт"
+          data-image="images/honor-3.jpg"
+          data-bio="Вихованець напряму кіберспорту, який вирізняється тактичним мисленням, дисципліною та командною роботою."
+          data-achievements="Учасник турнірів, капітан команди, відзначений за командну гру, стратегічне мислення та результативність.">
+          <img src="images/honor-3.jpg" alt="ПІБ спортсмена 3">
+          <div class="honor-card-content">
+            <span class="honor-sport">Кіберспорт</span>
+            <h3>ПІБ спортсмена 3</h3>
+            <p>Демонструє високий рівень концентрації, командної взаємодії та тактичної підготовки.</p>
+          </div>
+        </article>
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 4"
+          data-role="Пауерліфтинг"
+          data-image="images/honor-4.jpg"
+          data-bio="Вихованець ДЮСШ Близнюки, який наполегливо працює над силовою підготовкою та технікою виконання вправ."
+          data-achievements="Призер місцевих змагань, учасник чемпіонатів, відзначений за силу, витривалість та цілеспрямованість.">
+          <img src="images/honor-4.jpg" alt="ПІБ спортсмена 4">
+          <div class="honor-card-content">
+            <span class="honor-sport">Пауерліфтинг</span>
+            <h3>ПІБ спортсмена 4</h3>
+            <p>Сумлінно працює над спортивним результатом і демонструє високий рівень самодисципліни.</p>
+          </div>
+        </article>
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 5"
+          data-role="Гирьовий спорт"
+          data-image="images/honor-5.jpg"
+          data-bio="Спортсмен ДЮСШ, який досягає помітних результатів у гирьовому спорті та активно бере участь у спортивних заходах."
+          data-achievements="Учасник та призер змагань, відзначений за витривалість, техніку виконання вправ та спортивний характер.">
+          <img src="images/honor-5.jpg" alt="ПІБ спортсмена 5">
+          <div class="honor-card-content">
+            <span class="honor-sport">Гирьовий спорт</span>
+            <h3>ПІБ спортсмена 5</h3>
+            <p>Показує силу, витривалість та стабільний розвиток у тренувальному процесі.</p>
+          </div>
+        </article>
+
+        <article class="honor-card"
+          data-name="ПІБ спортсмена 6"
+          data-role="Спортивна риболовля"
+          data-image="images/honor-6.jpg"
+          data-bio="Вихованець напряму спортивної риболовлі, який демонструє витримку, уважність та відповідальний підхід до занять."
+          data-achievements="Учасник профільних заходів, відзначений за наполегливість, технічні навички та стабільність результатів.">
+          <img src="images/honor-6.jpg" alt="ПІБ спортсмена 6">
+          <div class="honor-card-content">
+            <span class="honor-sport">Спортивна риболовля</span>
+            <h3>ПІБ спортсмена 6</h3>
+            <p>Вирізняється уважністю, витримкою та відповідальним ставленням до справи.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="honor-modal" id="honorModal">
+    <div class="honor-modal-box">
+      <button class="honor-modal-close" id="honorModalClose" type="button" aria-label="Закрити">✕</button>
+      <div class="honor-modal-layout">
+        <div class="honor-modal-image-wrap">
+          <img src="" alt="Фото спортсмена" id="honorModalImage" class="honor-modal-image">
+        </div>
+        <div class="honor-modal-content">
+          <span class="honor-modal-sport" id="honorModalSport"></span>
+          <h2 id="honorModalName"></h2>
+
+          <div class="honor-modal-block">
+            <h3>Коротка біографія</h3>
+            <p id="honorModalBio"></p>
+          </div>
+
+          <div class="honor-modal-block">
+            <h3>Досягнення</h3>
+            <p id="honorModalAchievements"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>ДЮСШ Близнюки</h3>
+        <p>Офіційний сайт дитячо-юнацької спортивної школи.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Головна</a>
+        <a href="departments.html">Відділення</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    burgerBtn.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    const fontButtons = document.querySelectorAll('.font-btn');
+    const contrastToggle = document.getElementById('contrastToggle');
+    const grayscaleToggle = document.getElementById('grayscaleToggle');
+    const uiToggle = document.getElementById('uiToggle');
+
+    function setFontSize(size) {
+      document.body.classList.remove('font-small', 'font-normal', 'font-large');
+      document.body.classList.add(`font-${size}`);
+      localStorage.setItem('site-font-size', size);
+
+      fontButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.font === size) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function toggleBodyClass(className, storageKey, button) {
+      document.body.classList.toggle(className);
+      const isActive = document.body.classList.contains(className);
+      localStorage.setItem(storageKey, isActive ? 'true' : 'false');
+      button.classList.toggle('active', isActive);
+    }
+
+    fontButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setFontSize(btn.dataset.font);
+      });
+    });
+
+    contrastToggle.addEventListener('click', () => {
+      toggleBodyClass('high-contrast', 'site-high-contrast', contrastToggle);
+    });
+
+    grayscaleToggle.addEventListener('click', () => {
+      toggleBodyClass('grayscale-mode', 'site-grayscale-mode', grayscaleToggle);
+    });
+
+    uiToggle.addEventListener('click', () => {
+      toggleBodyClass('large-ui', 'site-large-ui', uiToggle);
+    });
+
+    const savedFont = localStorage.getItem('site-font-size') || 'normal';
+    setFontSize(savedFont);
+
+    if (localStorage.getItem('site-high-contrast') === 'true') {
+      document.body.classList.add('high-contrast');
+      contrastToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-grayscale-mode') === 'true') {
+      document.body.classList.add('grayscale-mode');
+      grayscaleToggle.classList.add('active');
+    }
+
+    if (localStorage.getItem('site-large-ui') === 'true') {
+      document.body.classList.add('large-ui');
+      uiToggle.classList.add('active');
+    }
+
+    const honorCards = document.querySelectorAll('.honor-card');
+    const honorModal = document.getElementById('honorModal');
+    const honorModalClose = document.getElementById('honorModalClose');
+    const honorModalImage = document.getElementById('honorModalImage');
+    const honorModalSport = document.getElementById('honorModalSport');
+    const honorModalName = document.getElementById('honorModalName');
+    const honorModalBio = document.getElementById('honorModalBio');
+    const honorModalAchievements = document.getElementById('honorModalAchievements');
+
+    honorCards.forEach(card => {
+      card.addEventListener('click', () => {
+        honorModalImage.src = card.dataset.image;
+        honorModalImage.alt = card.dataset.name;
+        honorModalSport.textContent = card.dataset.role;
+        honorModalName.textContent = card.dataset.name;
+        honorModalBio.textContent = card.dataset.bio;
+        honorModalAchievements.textContent = card.dataset.achievements;
+        honorModal.classList.add('active');
+      });
+    });
+
+    honorModalClose.addEventListener('click', () => {
+      honorModal.classList.remove('active');
+    });
+
+    honorModal.addEventListener('click', (e) => {
+      if (e.target === honorModal) {
+        honorModal.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        honorModal.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
