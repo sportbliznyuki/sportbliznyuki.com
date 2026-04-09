@@ -3041,3 +3041,78 @@ body.large-ui .admission-note h3 {
     font-size: 26px;
   }
 }
+
+/* ===== MATERIAL PAGE ===== */
+
+.material-section {
+padding-top: 20px;
+padding-bottom: 80px;
+}
+
+.material-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+}
+
+.material-card {
+padding: 26px;
+border-radius: 24px;
+background: var(--card-bg);
+border: 1px solid var(--card-border);
+box-shadow: var(--shadow);
+transition: .3s;
+}
+
+.material-card:hover {
+transform: translateY(-5px);
+}
+
+.material-icon {
+font-size: 34px;
+margin-bottom: 10px;
+}
+
+.material-card h3 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.material-card ul {
+padding-left: 18px;
+color: var(--text-soft);
+line-height: 1.7;
+}
+
+.material-card li {
+margin-bottom: 6px;
+}
+
+/* accessibility */
+
+body.large-ui .material-card h3 {
+font-size: 28px;
+}
+
+body.large-ui .material-card li {
+font-size: 18px;
+}
+
+body.high-contrast .material-card {
+background: #000;
+border-color: #fff;
+}
+
+/* adaptive */
+
+@media(max-width: 992px){
+.material-grid{
+grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.material-grid{
+grid-template-columns: 1fr;
+}
+}
